@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Company Registration</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/company-registration.css">
+</head>
+<body>
+    <div class="container-logo">
+        <img class="logo-company" src="img/logo-ideale.png">
+    </div>
+    <div class="container first">
+        <div class="row">
+            <div class="col-xl-6">
+                <form>
+                    <label>Company name</label><br>
+                    <input class="name-company-input" type="text" placeholder="Ideale">
+                    <select class="country-select">
+                        <option value="honduras">Honduras</option>
+                        <option value="costaRica">Costa Rica</option>
+                        <option value="salvador">El Salvador</option>
+                        <option value="nicaragua">Nicaragua</option>
+                        <option value="guatemala">Guatemala</option>
+                    </select><br>
+                    <label>Email</label><br>
+                    <input type="text" class="email" placeholder="ideale@gmail.com" autocomplete="new-password"><button class="at">@</button><br>
+                    <label>Password</label><br>
+                    <input class="password-text" type="password" placeholder="Password" autocomplete="new-password"><br>
+                    <label>Number Phone</label><br>
+                    <input class="number-text" type="text" placeholder="0101-0101"><br>
+                    <label>Address</label><br>
+                    <textarea class="address-text" placeholder=""></textarea>
+                </form>
+            </div>
+            <div class="col-xl-6 map-position">
+                <div class="row">
+                    <h1>Your location</h1>
+                </div>
+                <div class="row">
+                    <div id="map"></div>
+                </div> 
+            </div>  
+        </div>
+        <div class="row">
+            <div class="col-xl-12" id="banner">
+                <div class="add-banner">
+                    <input type="file" id="file-banner">
+                        <label for="file-banner" class="label-banner"><img src="icons/camera-solid.svg" width="25px;" alt=""> &nbsp Add or Change your Banner</label>
+                        <span class="tooltiptext">1064px * 395px</span>
+                </div>
+                <div class="logotype-container" id="logotype">
+                    <div class="logotype" >
+                        <input type="file" id="file-logotype">
+                        <label for="file-logotype" class="label-logotype"><img src="icons/camera-solid.svg" width="20px;" alt="">&nbsp Logotype</label>
+                        <span class="tooltiptext">200px * 200px</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-xl-12 information">
+                    <div class="row">
+                        <div class="col-xl-6 w-do">
+                            <label>Mision</label><br>
+                            <textarea class="w-do-area" placeholder=""></textarea>
+                        </div>
+                        <div class="col-xl-6 w-do">
+                            <label>Vision</label><br>
+                            <textarea class="w-do-area" placeholder=""></textarea>
+                        </div>
+                    </div>    
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <img src="icons/facebook-icon.svg"  width="40px;" alt="">
+                <input type="text"  class="social">
+            </div>
+        </div>
+        </div>
+    
+    <script src="js/company-registration.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhq9_LVYSufxDgbDHmSeLUitcEFFR5R1U&callback=initMap"
+    async defer></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body> 
+</html>

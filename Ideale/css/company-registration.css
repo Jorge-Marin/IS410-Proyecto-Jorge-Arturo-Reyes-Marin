@@ -1,0 +1,348 @@
+body{
+    background-color: #fcfafa;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container-logo{
+    align-content: center;
+    margin: 100px auto;
+    margin-bottom: 10px;
+    width: 120px;
+}
+
+.logo-company{
+    width: 120px;
+    border-radius: 5px;
+}
+
+label{
+    font-size: 18px;
+    font-weight: bolder;
+    color: #212529ab;
+    margin: 5px 0px 5px 0px;
+}
+
+.col-xl-6{
+    box-sizing: border-box;
+    padding: 90px 90px 0px 90px;
+}
+
+.name-company-input{
+    width: 73%;
+    margin-bottom: 19px;
+    height: 33px;
+    padding-left: 14px;
+    background-color: #ededed;
+    border-radius: 1px;
+    border: none;
+}
+
+.email{
+    width: 86%;
+    margin-bottom: 19px;
+    margin-right: 3px;
+    height: 33px;
+    padding-left: 14px;
+    background-color: #ededed;
+    border-radius: 1px;
+    border: none;
+    
+}
+
+.country-select{
+    width: 25%;
+    height: 33px;
+    border-radius: 3px;
+    margin: 0px;
+    background-color: #ededed;
+    border: none;
+    padding: 3px;
+}
+
+.password-text, .number-text, .address-text, .social{
+    width: 100%;
+    margin-bottom: 19px;
+    padding-left: 14px;
+    border: none;
+    height: 33px;
+    background-color: #ededed;
+    border-radius: 1px;
+}
+
+
+.at{
+    background-color: #FEE600;
+    color: white;
+    border: none;
+    height: 33.5px;
+    width: 10%;
+}
+
+.address-text{
+    height: 120px;
+}
+ 
+input[type="text"], input[type="password"], textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+       -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+         -o-transition: all 0.30s ease-in-out;
+  }
+  
+input[type=text]:focus, input[type="password"]:focus, textarea:focus{
+    border:             1px solid #006473e5;
+    box-shadow:         0 0 4px #006473e5;
+    margin:             4px 1px 22px 0px;
+    padding:            3px 0px 3px 10px;
+  }
+
+  .country-select:focus{
+    border:             1px solid #006473e5;
+    box-shadow:         0 0 4px #006473e5;
+    margin:             4px 1px 22px 0px;
+    padding:            3px 0px 3px 10px;
+  }
+
+#map{
+    width: 650px;
+    height: 450px;
+    border-radius: 5px;
+}
+
+.map-position{
+    padding: 90px 10px 90px 10px; 
+}
+
+h1{
+    font-weight: bolder;
+    color: #212529ab;
+    margin: 5px 0px 5px 0px;
+}
+
+.w-do{
+    padding: 50px 20px 50px 20px;
+
+}
+
+.w-do label{
+    font-size: 22px;
+    padding-left: 10px;
+}
+
+.w-do-area{
+    height: 130px;
+    width: 100%;
+    padding-left: 14px;
+    border: none;
+    background-color: #ededed;
+    border-radius: 2px;
+}
+
+#banner{
+    width: 1064px;
+    height: 395px;
+    margin-left: 50px;
+}
+
+input[type="file"]{
+    height: 0px;
+    overflow: hidden;
+    width: 0px;
+}
+
+.upload{
+    background-color:  #fff02c80;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    width: 100%;
+    height:100%;
+    text-align: center;
+    color:white; 
+    transition:transform 0.8s ease-out;
+}
+
+.message-banner{
+    margin-left: 385px;
+}
+
+.banner-icon{
+    float: left;
+    width: 20px;
+}
+
+.social-icons{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.label-banner{
+    color: white;
+    font-size: 25px;
+}
+
+.youtube{
+    height: 60px;
+}
+
+.social-networks{
+    float: right;
+    margin: 40px;
+}
+
+
+.label-p{
+    width: 151px;
+    height: 76px;
+    border: none;
+    background: #282827;
+    margin: 48px 0 0 0;
+    -moz-border-radius: 0 0 100px 100px;
+    -webkit-border-radius: 0 0 100px 100px;
+    border-radius: 0 0 100px 100px;
+}
+
+.label-p:hover{
+    background: #282827be;
+}
+
+.logotype-label:hover, .upload:hover{
+    color:white; 
+    transform: scale(1.1);
+}
+
+.information{
+    padding-left: 110px;
+    margin-top: 80px;
+}
+
+.thumb{
+    height: 75px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+}
+
+
+.show{
+    display: none;
+}
+
+
+#banner{
+    width: 1065px;
+    height: 393px;
+    background-color: #ededed;
+}
+
+.label-banner{
+    font-size: 19px;
+    transition: transform 0.8s ease-out;
+    background-color:  black;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+    color:white;
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.label-banner:hover, .label-logotype:hover{
+    transform: scale(0.9);
+}
+
+
+input[type='file']{
+    width: 0px;
+    height: 0px;
+}
+
+.add-banner {
+    position: relative;
+    display: inline-block;
+    width: 320px;
+  }
+  
+  .add-banner .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: 130%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .add-banner .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+  
+  .add-banner:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .logotype-container{
+      width: 200px;
+      height: 180px;
+      border-radius: 5px;
+      border: 3px solid white;
+      margin: 230px 0px 30px 41%;
+      background-color: #fee600e3;
+  }
+
+  .label-logotype{
+      border-radius: 5px;
+      padding: 7px 10px 7px 10px;
+      background-color: black;
+      color: white;
+      font-size: 14px;
+      transition: transform 0.8s ease-out;
+  }
+
+  .logotype {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+  }
+  
+  .logotype .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: 130%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .logotype .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+  
+  .logotype:hover .tooltiptext {
+    visibility: visible;
+  }
