@@ -11,28 +11,54 @@ function putBannerBackground(evt) {
     var files = evt.target.files; // FileList object
     
     // Loop through the FileList and render image files as thumbnails.
-    for (var i = 0, f; f = files[i]; i++) {
+    for (let i = 0, f; f = files[i]; i++) {
+      console.log(i);
       // Only process image files.
       if (!f.type.match('image.*')){
         continue;
       }
 
       var reader = new FileReader();
+
+      if(i==0){
+        $('#ol-indicators').append(`
+        <li data-target="#banner" data-slide-to="${i}" class="active"></li>`);
+      }else{
+        $('#ol-indicators').append(`
+        <li data-target="#banner" data-slide-to="${i}"></li>`);
+      }
       
-      // Closure to capture the file information.
-      reader.onload = (function(theFile){
-        return function(e){
-          // Render thumbnail.                                                                                                                                                                                                                                                     
-          document.getElementById('banner').style.backgroundImage = `url(${e.target.result})`;
-          document.getElementById('banner').style.backgroundRepeat = "no-repeat";
-          document.getElementById('banner').style.backgroundSize = "cover";
-        };
-      })(f);
+      if(i==0){
+        // Closure to capture the file information.
+          reader.onload = (function(theFile){
+          return function(e){
+            // Render thumbnail.  
+            
+            $('#carousel-image').append(
+              `<div class="carousel-item active position-carousel">
+              <img src="${e.target.result}" class="d-block w-100">
+            </div>`
+            ); 
+          };
+        })(f);
+        }else{
+         // Closure to capture the file information.
+         reader.onload = (function(theFile){
+          return function(e){
+            // Render thumbnail.  
+            $('#carousel-image').append(
+              `<div class="carousel-item position-carousel">
+              <img src="${e.target.result}" class="d-block w-100">
+             </div>`
+            ); 
+          };
+        })(f);
+      }
 
       // Read in the image file as a data URL.
       reader.readAsDataURL(f);
     }
-  }
+}
 
 
 function putLogotypeBackground(evt) {
@@ -40,6 +66,7 @@ function putLogotypeBackground(evt) {
   
   // Loop through the FileList and render image files as thumbnails.
   for (var i = 0, f; f = files[i]; i++) {
+    
     console.log(f);
     // Only process image files.
     if (!f.type.match('image.*')){
@@ -69,3 +96,6 @@ function putLogotypeBackground(evt) {
 
 document.getElementById('file-banner').addEventListener('change', putBannerBackground, false);
 document.getElementById('file-logotype').addEventListener('change', putLogotypeBackground, false);
+
+/*
+*/

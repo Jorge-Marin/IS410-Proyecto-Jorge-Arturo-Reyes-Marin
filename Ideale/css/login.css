@@ -32,7 +32,7 @@ body{
       -o-transition: all 0.30s ease-in-out;
 }
 
-input[type=text]:focus, input[type="password"]:focus, textarea:focus{
+input[type=text]:focus, input[type="password"]:focus{
     border:             1px solid #006473e5;
     box-shadow:         0 0 4px #006473e5;
     margin:             4px 1px 22px 0px;
