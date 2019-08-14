@@ -94,6 +94,19 @@ function putLogotypeBackground(evt) {
   }
 }
 
+$(document).ready(function () {
+  $('#show-password').click(function () {
+    console.log("Llamado Correcto");
+    if ($('#show-password').is(':checked')) {
+      $('#password-one').attr('type', 'text');
+      $('#password-two').attr('type', 'text');
+    } else {
+      $('#password-one').attr('type', 'password');
+      $('#password-two').attr('type', 'password');
+    }
+  });
+});
+
 document.getElementById('file-banner').addEventListener('change', putBannerBackground, false);
 document.getElementById('file-logotype').addEventListener('change', putLogotypeBackground, false);
 
