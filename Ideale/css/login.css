@@ -15,7 +15,7 @@ body{
 
 .logotype-login {
     border-radius: 5px;
-    margin: 25px 110px 50px 130px
+    margin: 25px 110px 50px 120px
 }
 
 input[type='text'], input[type='password']{
@@ -85,6 +85,11 @@ label{
 
   .input-assumpte:checked + label:after {
     background-color: rgba(245, 231, 35, 0.726);
+  }
+  
+  .title-h2{
+    color: #595959;
+    font-weight: bold;
   }
 
   .sign-up{

@@ -28,6 +28,10 @@ label{
     margin-bottom: 15px;
 }
 
+.title-create{
+    text-align: center;
+    margin-bottom: 15px;
+}
 
 
 .input-group-text{
@@ -83,11 +87,11 @@ h2{
     padding: 15px 25px 15px 25px;
     font-weight: 600;
     font-size: 1.3rem;
-    margin-bottom: 70px;
 }
 
 .btn-register-container{
     padding-left: 40%;
+    margin-bottom: 30px;
 }
 
 .carousel-inner{
@@ -99,7 +103,7 @@ input[type=text], input[type="password"], #text-direction, #select-country{
     margin-bottom: 20px;
     padding-left: 14px;
     border: none;
-    height: 45px;
+    height:  40px;
     background-color: #ededed;
     border-radius: 5px;
 }
@@ -126,9 +130,6 @@ input[type=text]:focus, input[type="password"]:focus, #text-direction:focus, #se
     background-color: white;
 }
 
-
-
-
 input[type="file"]{
     height: 0px;
     overflow: hidden;
@@ -136,10 +137,9 @@ input[type="file"]{
 }
 
 #banner{
-    width: 1120px;
     height: 393px;
     background-color: #ededed;
-    margin-left: 40px
+    margin-bottom: 130px
 }
 
 .label-banner{
@@ -159,7 +159,9 @@ input[type="file"]{
 }
 
 .information{
-    margin-top: 120px;
+    max-width: 1200px;
+    background-color: white;
+    padding: 30px 20px 30px 20px;
 }
 
 .position-carousel{

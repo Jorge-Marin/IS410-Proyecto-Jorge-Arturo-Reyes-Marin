@@ -1,0 +1,93 @@
+body{
+    background-color: #ededed;
+}
+
+#background-marketing{
+    background-image: url(../img/Coca-Cola\ 1.jpg);
+    height: 393px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 90px;
+}
+
+
+.profile-container{
+    background-color: white;
+    width: 100%;
+    position: initial;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.containe-logotype{
+    position: initial;
+    left: 0px;
+    margin-top: -60px;
+    margin-left: 42%;
+    top: 0px;
+    z-index: 3;
+}
+
+.contain-nameCompany{
+    text-align: center;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size:rem;
+}
+
+.mision-company{
+    padding-left: 150px;
+    padding-right: 150px;
+    font-size: 1.1rem;
+}
+
+.label-title{
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.mision-and-vision{
+    padding-left: 13%;
+}
+
+.hr-vertical{    
+    height:60%; /* you might need some positioning for this to work, see other questions about 100% height */
+    width:0;
+    border:1px solid black;
+}
+
+.col-hr-vr{
+    padding: 0px;
+    padding: 0.8% 0 0.8% 0;
+    max-width: 25px;
+}
+
+.carousel-inner {
+    border-radius: 0px;
+}
+
+.container-fluid{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+label{
+    color: black !important;
+}
+
+.label-banner{
+    color: white !important;
+}
+
+h2{
+    color: black !important;
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1140px;
+        background-color: transparent;
+        margin-bottom: 50px;
+    }
+}
