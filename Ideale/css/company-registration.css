@@ -1,12 +1,12 @@
 body{
-    background-color: #fcfafa;
+    background-color: #2C2C2C;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .container-logo{
     align-content: center;
-    margin: 100px auto;
+    margin-left: auto;
     margin-bottom: 10px;
     width: 120px;
 }
@@ -33,14 +33,13 @@ label{
     margin-bottom: 15px;
 }
 
-
 .input-group-text{
     background-color: #FAE90E;
     color: white;
     font-weight: 600;
 }
 
-#map{
+#map-company{
     width: 683.9px;
     height: 480px;
     border-radius: 5px;
@@ -51,10 +50,9 @@ label{
      max-width: 40%;
 }
 
-h2{
-    font-weight: bolder;
-    color: #212529ab;
-    margin: 25px 0px 5px 0px;
+.label-publicity{
+    color: white;
+    font-weight: lighter;
 }
 
 .social{
@@ -66,6 +64,18 @@ h2{
     width: 16%;
     display: initial;
     margin-right: 15px;
+}
+
+.col-hr-vr{
+    padding: 0px;
+    padding: 0.8% 0 0.8% 0;
+    max-width: 25px;
+}
+
+.hr-vertical{    
+    height:60%; /* you might need some positioning for this to work, see other questions about 100% height */
+    width:0;
+    border:1px solid #ffffff;
 }
 
 .social .form-control:focus{
@@ -92,10 +102,6 @@ h2{
 .btn-register-container{
     padding-left: 40%;
     margin-bottom: 30px;
-}
-
-.carousel-inner{
-    border-radius: 7px;
 }
 
 input[type=text], input[type="password"], #text-direction, #select-country{
@@ -136,22 +142,39 @@ input[type="file"]{
     width: 0px;
 }
 
+.background-cool{
+    background-color: #2C2C2C;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
 #banner{
     height: 393px;
-    background-color: #ededed;
+    background-color: #ffffff;
     margin-bottom: 130px
+}
+
+.message-publicity{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .label-banner{
     font-size: 19px;
     transition: transform 0.8s ease-out;
-    background-color:  black;
+    background-color:  #2C2C2C;
     padding: 5px 10px 5px 10px;
     border-radius: 5px;
     border: 2px solid white;
     color:white;
     font-weight: 500;
     margin-left: 15px;
+    margin-top: 15px;
 }
 
 .label-banner:hover, .label-logotype:hover{
@@ -224,7 +247,7 @@ input[type="file"]{
   .label-logotype{
       border-radius: 5px;
       padding: 7px 10px 7px 10px;
-      background-color: black;
+      background-color: #2C2C2C;
       color: white;
       font-size: 14px;
       transition: transform 0.8s ease-out;
@@ -268,8 +291,25 @@ input[type="file"]{
 
 @media (min-width: 1200px){
   .container {
-      max-width: 1200px;
-      background-color: white;
-      margin-bottom: 50px;
+        max-width: 1200px;
+        background-color: #ffffff;
+        margin-bottom: 50px;
+        border-radius: 5px;
   }
+}
+
+.fst{
+    background-color: #FAE90E;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.fst h2{
+    font-weight: bold;
+    color: white;
+}
+
+.fn{
+    background-color: #FAE90E;
+    height: 40px;
 }

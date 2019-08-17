@@ -1,0 +1,167 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar-vertical{
+    height: 800px;
+    background-color: #2C2C2C;
+}
+
+.img-profile{
+    border-radius: 50%;
+    border: 3px solid white;
+    float: left;
+    margin-right: 13px;
+}
+
+.label-profile{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    padding-left: 70px;
+    border-left: 7px solid #FAE90E;
+    font-size: 1.3rem;
+    padding: 15px 0px 15px 80px;
+    background-color: #000000;
+}
+.nav-pills .nav-link {
+    border-radius: 0px;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0px;
+    padding-left: 70px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 15px 0px 15px 80px;
+}
+
+.far, .fas{
+    color: #FAE90E;
+    margin-right: 15px;
+}
+
+.name-company{
+    font-size: 1.5rem;
+    padding: 10px 0px 10px 15px;
+    color: white;
+    font-weight: 600;
+}
+
+.message-for-user{
+    color: white !important;
+    font-size: 1.1rem;
+    padding: 5px 30px 5px 30px;
+}
+
+.dude{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.information-basic{
+    background-color: #FAE90E;
+}
+
+#banner {
+    height: 393px;
+    background-color: #ffffff;
+    margin-bottom: 0px;
+}
+
+.information-basic {
+    background-color: #2C2C2C;
+    padding: 100px 400px;
+    margin-left: 0px;
+}
+
+.hr-vertical {
+    height: 100%;
+    width: 0;
+    border: 1px solid #ffffff;
+    margin: 0px 10px 0px 10px;
+}
+
+.name-company-big{
+    font-size: 3.8rem;
+    color: white;
+    padding: 44px 0px;
+    font-weight: bold;
+}
+
+.information-company{
+    padding: 40px 70px; 
+    background-image: url(../img/background-1.svg);
+    margin-left: 0px;
+    height: 582.3px;
+}
+
+.title-new-promotions{
+    width: 100%;
+    text-align: center;
+    color: #FAE90E;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.ultimate-promotions{
+    padding: 100px;
+    background-image: url(../img/background-2.svg);
+    margin-left: 0px;
+    background-repeat: no-repeat;
+}
+
+.card-title{
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+.label-card-date{
+    color: #2C2C2C !important;
+    font-size: 1.2rem;
+}
+
+.card{
+    background-color: #FAE90E;
+    padding: 7px;
+    transition: transform 0.8s ease-out;
+}
+
+.card-text{
+    font-size: 1.06rem;
+    color: #454444f0;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.card-img-top{
+    height: 230px;
+    border-radius: 3px;
+}
+
+.card-body{
+    padding: 10px;
+}
+
+.card:hover{
+    background-color: #000000;
+    border: 1px solid #FAE90E;
+    border-bottom: 4px solid #FAE90E;
+    padding: 7px;
+    color: white;
+    transform: scale(1.1);
+}
+
+.card:hover .card-text,.card:hover .label-card-date{
+   color: white !important;
+}

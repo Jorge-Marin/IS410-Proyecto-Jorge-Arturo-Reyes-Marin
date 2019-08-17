@@ -6,15 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Company Registration</title>
+    <link rel="stylesheet" href="css/all.css"><!--Font Awesome-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/company-registration.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container-logo">
-        <img class="logo-company" src="img/logo-ideale.png">
+    <div class="background-cool">
+        <div class="container" style="background-color: transparent;">
+            <div class="row">
+                <div class="col-xl-5">
+                    <div class="container-logo">
+                        <img class="logo-company" src="img/logo-ideale.png">
+                    </div>
+                </div>
+                <div class="col-hr-vr">
+                    <hr class="hr-vertical">
+                </div>
+                <div class="col-xl-5">
+                    <div>
+                        <h2 style="color: white; font-weight: bolder;">Abrir una Cuentra para Empresa</h2>
+                        <label class="label-publicity">Bienvenido a la nueva era del marketing digital.
+                            <br>
+                            Que el mundo se entere quien eres!
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="title-create">
-        <h2>Abrir una Cuentra para Empresa</h2>
+    <div class="contaiener-fluid fst">
+        <h2>Agrega un Banner Publicitario</h2>
     </div>
     <div id="banner" class="container-fluid carousel slide" data-ride="carousel">
         <ol class="carousel-indicators" id="ol-indicators">
@@ -25,6 +47,11 @@
                 <label for="file-banner" class="label-banner"><img src="icons/camera-solid.svg" width="25px;" alt=""> &nbsp Add or Change your Banner</label>
                 <span class="tooltiptext">1064px * 395px</span>
             </div>
+        </div>
+        <div class="container-fluid message-publicity" id="div-message-publicity">
+            <i class="fas fa-laugh" style="font-size: 5rem; color: #2C2C2C;"></i>
+            <br>
+            <label style="font-size: 2.3rem;">Recuerda Tu Imagen Importa</label>
         </div>
         <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -98,13 +125,12 @@
             </div>
         </div>   
     </div> 
-    
+    <div class="container-fluid fn">  
+    </div>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvzwuQ01uWaqAinM57xUReChAFHDRZf-s&callback=initMap"
     async defer></script>
     <script src="js/company-registration.js"></script>
-    
-    
 </body> 
 </html>
