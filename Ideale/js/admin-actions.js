@@ -37,7 +37,7 @@ function showFields(){
             </div>
         </div>
         <div class="col-xl-12">
-            <button type="button" class="btn btn-outline-warning">Confirmar Actualizacion</button>
+            <button onclick='confirmUpdate()' type="button" class="btn btn-outline-warning">Confirmar Actualizacion</button>
         </div>
     </div>`
     );
@@ -47,6 +47,45 @@ function showFields(){
 }
 
 function cleanupdateFields(){
+    $('#container-update-fields').empty();
+    $('#container-update-fields').removeClass('update-fields');
+    $('html, body').animate({
+        scrollTop: $("#displayInformationCompany").offset().top
+        }, 2000);
+}
+
+
+function putLogotypeBackground(evt) {
+    var files = evt.target.files; // FileList object
+    
+    // Loop through the FileList and render image files as thumbnails.
+    for (var i = 0, f; f = files[i]; i++) {
+      
+      // Only process image files.
+      if (!f.type.match('image.*')){
+        continue;
+      }
+  
+      var reader = new FileReader();
+      
+      // Closure to capture the file information.
+      reader.onload = (function(theFile){
+        return function(e){
+          // Render thumbnail.
+  
+        document.getElementById('profile-image').style.backgroundImage = `url(${e.target.result})`;
+        };
+      })(f);
+  
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+  }
+  
+  document.getElementById('profile-image').addEventListener('change', putLogotypeBackground, false);
+
+  
+  function confirmUpdate(){
     $('#container-update-fields').empty();
     $('#container-update-fields').removeClass('update-fields');
     $('html, body').animate({
