@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1310.9 600.8" style="enable-background:new 0 0 1310.9 600.8;" xml:space="preserve">
+	 viewBox="0 0 1310.9 597.8" style="enable-background:new 0 0 1310.9 597.8;" xml:space="preserve">
 <style type="text/css">
 	.st0{opacity:0.79;}
 	.st1{fill:#2C2C2C;}
 	.st2{fill:#FCFAFA;}
 	.st3{fill:#FAE90E;}
 	.st4{fill:#8F8F8F;}
+	.st5{fill:#FFFFFF;}
+	.st6{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
 </style>
 <g class="st0">
-	<rect x="0" y="-0.2" class="st1" width="1311" height="601"/>
+	<rect y="0.8" class="st1" width="1317" height="598"/>
 </g>
 <g class="st0">
 	<rect y="-597.2" class="st2" width="1311" height="598"/>
@@ -32,8 +34,38 @@
 		<path class="st3" d="M-180.7-169.8c1.9,0,1.9-3,0-3C-182.6-172.8-182.6-169.8-180.7-169.8L-180.7-169.8z"/>
 	</g>
 </g>
-<polygon class="st4" points="1284.9,559 1263,546.3 1263,571.8 "/>
-<polygon class="st4" points="1285,533.4 1263.1,520.7 1263.1,546.2 "/>
-<polygon class="st4" points="1284.9,508.1 1263,495.3 1263,520.8 "/>
-<polygon class="st4" points="1285,482.4 1263.1,469.7 1263.1,495.2 "/>
+<polygon class="st4" points="1284.9,559.1 1263,546.3 1263,571.9 "/>
+<polygon class="st4" points="1285,533.5 1263.1,520.7 1263.1,546.2 "/>
+<polygon class="st4" points="1284.9,508.1 1263,495.3 1263,520.9 "/>
+<polygon class="st4" points="1285,482.5 1263.1,469.7 1263.1,495.3 "/>
+<g>
+	<circle class="st5" cx="1169.6" cy="517.8" r="22.5"/>
+</g>
+<g>
+	<circle cx="1170" cy="518.7" r="8"/>
+</g>
+<line class="st6" x1="157.2" y1="550.3" x2="171.8" y2="572.1"/>
+<line class="st6" x1="146.2" y1="546.1" x2="160.7" y2="567.8"/>
+<line class="st6" x1="157.2" y1="550.3" x2="171.8" y2="572.1"/>
+<line class="st6" x1="146.2" y1="546.1" x2="160.7" y2="567.8"/>
+<line class="st6" x1="139.8" y1="550.2" x2="154.4" y2="571.9"/>
+<line class="st6" x1="128.7" y1="546" x2="143.3" y2="567.7"/>
+<line class="st6" x1="125.1" y1="552.4" x2="139.7" y2="574.1"/>
+<line class="st6" x1="114" y1="548.2" x2="128.6" y2="569.9"/>
+<line class="st6" x1="125.1" y1="552.4" x2="139.7" y2="574.1"/>
+<line class="st6" x1="114" y1="548.2" x2="128.6" y2="569.9"/>
+<line class="st6" x1="107.7" y1="552.3" x2="122.2" y2="574"/>
+<line class="st6" x1="96.6" y1="548" x2="111.2" y2="569.7"/>
+<line class="st6" x1="91.3" y1="552.4" x2="105.9" y2="574.2"/>
+<line class="st6" x1="80.2" y1="548.2" x2="94.8" y2="569.9"/>
+<line class="st6" x1="91.3" y1="552.4" x2="105.9" y2="574.2"/>
+<line class="st6" x1="80.2" y1="548.2" x2="94.8" y2="569.9"/>
+<line class="st6" x1="73.8" y1="552.3" x2="88.4" y2="574"/>
+<line class="st6" x1="62.7" y1="548.1" x2="77.3" y2="569.8"/>
+<line class="st6" x1="59.1" y1="554.5" x2="73.7" y2="576.2"/>
+<line class="st6" x1="48" y1="550.2" x2="62.6" y2="572"/>
+<line class="st6" x1="59.1" y1="554.5" x2="73.7" y2="576.2"/>
+<line class="st6" x1="48" y1="550.2" x2="62.6" y2="572"/>
+<line class="st6" x1="41.7" y1="554.4" x2="56.3" y2="576.1"/>
+<line class="st6" x1="30.6" y1="550.1" x2="45.2" y2="571.8"/>
 </svg>
