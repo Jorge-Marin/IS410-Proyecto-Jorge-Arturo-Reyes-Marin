@@ -1,6 +1,8 @@
 .backgrounds-divs{
     background-size: cover;
     background-repeat: no-repeat;
+    height: 600px;
+    background-attachment: fixed;
 }
 
 .container-fluid{
@@ -52,9 +54,9 @@
     border: 2px solid black;
 }
 
-.history{
-    padding: 4.1% 17.1%;
+.history {
     text-align: center;
+    padding: 2.5% 5%;
 }
 
 .h2-title{
@@ -78,7 +80,7 @@
 }
 
 .icons-show-information{
-    margin-top: 8%;
+    margin-top: 4%;
     font-size: 2.5rem;
     color: #2e2e2e
 }
@@ -91,4 +93,35 @@
 .down-icons-description{
     font-size: 1.2rem;
     font-weight: 500;
+}
+
+.container-information{
+    font-size: 1.1rem;
+    padding: 5px 10.1px;
+    color: #000000ba;
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+}
+
+.transparenci{
+    position: relative;
+    top: 0px ;
+    left: 0px;
+    z-index: 2;
+}
+
+.icons i{
+    margin-bottom: 79.2%;
+    font-size: 1.8rem;
+    color: #434343b8;
+}
+
+.container-icons{
+    width: 3%;
+    margin: 4.3% 3%;
+}
+
+.direction{
+    padding: 31.9% 0% 4.9% 57.6%;
+    color: white;
 }
