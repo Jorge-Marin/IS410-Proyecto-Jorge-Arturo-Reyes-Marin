@@ -16,3 +16,10 @@ function activeCurrent(currentActive){
     );
     $('#'+currentActive+' a').addClass('border-active');
 }
+
+$('#s5').cycle({ 
+    fx:     'scrollLeft', 
+    timeout: 5000, 
+    before:  onBefore, 
+    after:   onAfter 
+ });

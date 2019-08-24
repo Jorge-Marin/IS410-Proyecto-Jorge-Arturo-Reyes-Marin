@@ -125,3 +125,86 @@
     padding: 31.9% 0% 4.9% 57.6%;
     color: white;
 }
+
+.pictures img{
+    width: 140px;
+}
+
+.more-pictures{
+    margin-top: 5%;
+}
+
+.pictures{
+    float: left;
+}
+
+.active{
+    border-bottom: 4px solid rgb(44, 44, 44);
+}
+
+.description{
+    background-color: black;
+    height: auto;
+    width: 340px;
+    float: right;
+    z-index: 2;
+    position: relative;
+    top: -100px;
+    left: -85px;
+    padding: 3.3% 2%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.description h4{
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+
+.description p{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.description hr{
+    height: 5px;
+    background-color: white;
+    margin-right: 65%;
+}
+
+.image-product{
+    float: left;
+}
+
+.rounded-pill{
+    background: black;
+    border: 3.8px solid white;
+    color: white;
+    padding: 7.3px 30.4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-left: 7.4%;
+}
+
+.last-price{
+    font-size: 1rem;
+}
+
+.last-price label{
+    text-decoration: line-through;
+}
+
+.for-between{
+    background-color: white;
+}
+
+.recients{
+    float: left;
+}
+
+.contain-backimage{
+    width: 100%;
+    height: 220px;
+    float: left;
+    background-size: cover;
+}
