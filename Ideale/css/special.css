@@ -10,12 +10,9 @@
     padding-right: 0px;
 }
 
-.illusion{
-    background-color: #00000026;
-    background-size: contain;
-    height: 600px;
+.name{
+    font-size: 2rem;
 }
-
 
 .big-title{
     color: #f0f0f0;
@@ -37,11 +34,12 @@
 .container-logotype{
     height: 110px;
     width: 110px;
+    margin-right: 0.8%;
     background-size: cover;
 }
 
 .nav-item{
-    padding: 41.7px 10px 0px 10px;
+    padding: 34.1px 10px 0px 10px;
 }
 
 .nav-link{
@@ -138,8 +136,34 @@
     float: left;
 }
 
-.active{
-    border-bottom: 4px solid rgb(44, 44, 44);
+.nav-tabs {
+    border: none;
+    width: 100%;
+}
+
+.nav-tabs .nav-link.active {
+    color: black !important;
+    background-color: none;
+}
+
+.name-company{
+    font-size: 1.8rem;
+    padding: 0.9%;
+    color: #5e5d5d;
+    width: auto;
+}
+
+.nav-tabs a{
+    color: #5e5d5d;
+}
+
+.nav-tabs .nav-link.active {
+    border-bottom: 2px solid #2e2e2e;
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link {
+    border: none; 
 }
 
 .description{
@@ -207,4 +231,88 @@
     height: 220px;
     float: left;
     background-size: cover;
+}
+
+
+.title-new-promotions {
+    width: 100%;
+    text-align: center;
+    color: #fffffd;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    padding: 40px 0px;
+    border-right: 2px solid white;
+}
+
+.center-recients{
+    padding: 2% 3%;
+}
+
+.container-recientes-center{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 32px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 32px -14px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 32px -14px rgba(0,0,0,0.75);
+}
+
+.container-recientes-corner{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 32px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 32px -14px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 32px -14px rgba(0,0,0,0.75);
+}
+
+
+.descount{
+    width: 0;
+    height: 0;
+    border-top: 75px solid black;
+    border-right: 100px solid transparent;
+}
+
+.price-descount{
+    color: white;
+    position: relative;
+    top: -70.4px;
+    left: 5.7px;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.product{
+    height: 200px;
+    background-size: cover;
+    width: 100%; 
+}
+
+.description-recients h4{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 1.7rem;
+    padding: 3.3% 2%
+}
+
+.description-recients hr{
+    height: 5px;
+    background-color: black;
+    margin-right: 65%;
+}
+
+.description-recients .rounded-pill{
+    margin-left: 4.7%;
+}
+
+.description-recients{
+    padding: 5%;
+}
+
+.center{
+    padding: 2% 3%;
 }
