@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://cdn.ckeditor.com/4.8.0/standard-all/ckeditor.js"></script>
+	<style type="text/css">
+		/* Minimal styling to add some padding around the editor in this sample */
+		body {
+			padding: 30px;
+		}
+		.container {
+			max-width: 1130px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<textarea id="editor1">
+	</textarea>
+</div>
+<script>
+	CKEDITOR.replace( 'editor1', {
+		toolbar: [
+			{ name: 'clipboard', items: [ 'Undo', 'Redo' ] },
+			{ name: 'styles', items: [ 'Styles', 'Format' ] },
+			{ name: 'basicstyles', items: [ 'Bold', 'Italic'] },
+			{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList'] }
+		],
+		
+	} );
+</script>
+</body>
+</html>
