@@ -40,6 +40,17 @@ function showwhatsUp(value){
 function loadImagePos(evt) {
     var parent = document.querySelector('#container-image-publication');
 
+    var files = evt.target.files; // FileList object
+    if(files.length>4){
+      $( "#alert-files-size" ).fadeIn( "slow", function() {
+      });
+      setTimeout(function(){ 
+        $( "#alert-files-size" ).fadeOut( "slow", function() {
+        });
+      }, 5000);
+      return;
+    }
+
     // Cantidad de div
     var divs = parent.querySelectorAll('div');
     var idsElements = [];
@@ -50,7 +61,7 @@ function loadImagePos(evt) {
     }
 
     var cantidad = divs.length;
-    var files = evt.target.files; // FileList object
+
 
     if(cantidad==0){
       var addClass = "one-image";
@@ -85,7 +96,14 @@ function loadImagePos(evt) {
       }
     }
     else if(cantidad==8){
-    }    
+      $( "#alert-files-size" ).fadeIn( "slow", function() {
+      });
+      setTimeout(function(){ 
+        $( "#alert-files-size" ).fadeOut( "slow", function() {
+        });
+      }, 5000);
+      return;
+    }   
   }
   
 document.getElementById('image-file').addEventListener('change', loadImagePos, false);
@@ -183,10 +201,28 @@ function changeClassImage(changeClass,idsElements, special){
   }
 }
 
+function hideAlertFiles(){
+  $( "#alert-files-size" ).fadeOut( "slow", function() {
+  });
+}
 
-function showModal(srcImage){
-  $('#showImage').attr('src',`${srcImage}`);
-  $('#exampleModal').modal('show');
+function showModal(srcImage,iCome,idFather){
+  if(iCome=='modal'){
+    $('#modal-comments').modal('hide');
+    $('#modal-image').modal('show');
+    $('#showImage').attr('src',`${srcImage}`);
+    $('#btn-close').attr('onclick','returnMeModalComment()')
+  }else{
+    $('#showImage').attr('src',`${srcImage}`);
+  $('#modal-image').modal('show');
+  }
+}
+
+function returnMeModalComment(){
+  console.log("retorne");
+  $('#modal-image').modal('hide');
+  $('#modal-comments').modal('show');
+  $('#btn-close').removeAttr('onclick');
 }
 
 function sendElementsNormal(){
@@ -213,13 +249,22 @@ function sendElementsNormal(){
     cont++;
   }
 
-  console.log(picturesJSON);
   dataPublicacion.Pictures = picturesJSON;
   dataPublicacion.Likes = 0;
   dataPublicacion.Comentarios = 0;
-
-  $('#container-publications-makes').append(
-    `<div id="information-publications" class="row">
+  child = document.getElementById('container-publications-makes').firstChild; 
+  var firstchildCode;
+  if(child.id==undefined){
+    firstchildCode =0;
+  }else{
+    diff = child.id.length - 25;
+    console.log(diff);
+    firstchildCode =  child.id.slice(-diff);
+    firstchildCode = parseInt(firstchildCode) + 1;
+  }
+  
+  $('#container-publications-makes').prepend(
+    `<div id="information-publications-${firstchildCode}" class="row information-publications">
     <div class="col-xl-1">
         <img src="img/new/logo.jpg" style="border-radius: 50%" width="50px;" alt="">
     </div>
@@ -231,14 +276,14 @@ function sendElementsNormal(){
     <div class="col-xl-1">
         <svg viewBox="0 0 24 24" class="icons-actions"><g><path d="M20.207 8.147c-.39-.39-1.023-.39-1.414 0L12 14.94 5.207 8.147c-.39-.39-1.023-.39-1.414 0-.39.39-.39 1.023 0 1.414l7.5 7.5c.195.196.45.294.707.294s.512-.098.707-.293l7.5-7.5c.39-.39.39-1.022 0-1.413z"></path></g></svg>
     </div>
-    <div id="description-publication" class="col-lx-12 ">
-        <p>${(dataPublicacion.Description=='')?'':dataPublicacion.Description}</p>
+    <div id="description-publication-${firstchildCode}" class="col-lx-12 ">
+        ${(dataPublicacion.Description=='')?'':dataPublicacion.Description}
     </div>
-    ${comprobatePostImage(dataPublicacion.Pictures)}
+    ${comprobatePostImage(dataPublicacion.Pictures,firstchildCode)}
     
     <div class="col-xl-12">
-            <svg viewBox="0 0 24 24" class="icons-actions"><g><path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z"></path></g></svg>
-            <label class="number-actions">${dataPublicacion.Comentarios}</label>
+            <span onclick="showCommentPublication('information-publications-${firstchildCode}')"><svg viewBox="0 0 24 24" class="icons-actions"><g><path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.044.286.12.403.142.225.384.347.632.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.367-3.43-7.787-7.8-7.788zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.335-.75-.75-.75h-.396c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z"></path></g></svg>
+            <label class="number-actions">${dataPublicacion.Comentarios}</label></span>
             <svg viewBox="0 0 24 24" class="icons-actions"><g><path d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.814-1.148 2.354-2.73 4.645-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.376-7.454 13.11-10.037 13.157H12zM7.354 4.225c-2.08 0-3.903 1.988-3.903 4.255 0 5.74 7.034 11.596 8.55 11.658 1.518-.062 8.55-5.917 8.55-11.658 0-2.267-1.823-4.255-3.903-4.255-2.528 0-3.94 2.936-3.952 2.965-.23.562-1.156.562-1.387 0-.014-.03-1.425-2.965-3.954-2.965z"></path></g></svg>
             <label class="number-actions">${dataPublicacion.Likes}</label>
     </div>
@@ -257,7 +302,6 @@ function sendElementsNormal(){
 function getElementByClass(JSONPictures){
   var addClass, special = '';
   var lengthSrc = Object.keys(JSONPictures).length;
-  console.log(lengthSrc);
   if(lengthSrc==1){
     addClass = 'one-image';
     special = '';
@@ -276,10 +320,10 @@ function getElementByClass(JSONPictures){
   var acumulateHTML = '';
   for(let i=0; i<valuesPictures.length; i++){
     if(special==''){
-      acumulateHTML+= `<div class="${addClass}" onclick="showModal('${valuesPictures[i]}')" style="background-image: url(${valuesPictures[i]})"> 
+      acumulateHTML+= `<div id="addClass" class="${addClass}" onclick="showModal('${valuesPictures[i]}')" style="background-image: url(${valuesPictures[i]})"> 
         </div>`      
     }else{
-      acumulateHTML+= `<div class="${special}" onclick="showModal('${valuesPictures[i]}')" style="background-image: url(${valuesPictures[i]})"> 
+      acumulateHTML+= `<div id="addClass" class="${special}" onclick="showModal('${valuesPictures[i]}')" style="background-image: url(${valuesPictures[i]})"> 
         </div>`
       special = '';
     }
@@ -289,10 +333,10 @@ function getElementByClass(JSONPictures){
 
 }
 
-function comprobatePostImage(JSONPictures){
+function comprobatePostImage(JSONPictures,firstchildCode){
   var yes = '';
   if(Object.keys(JSONPictures).length!=0){
-    yes = `<div id="container-image-divs">
+    yes = `<div id="container-image-divs-${firstchildCode}" style='margin-left: 88px;'>
       ${getElementByClass(JSONPictures)}
     </div>`;
   }else{
@@ -402,15 +446,15 @@ function createFieldsProducts(){
                     <label class="add-pictures-label">Detalles del Producto</label><br>
                   </div>
                 <div class="row" style="padding: 25px 10px 0px 120px;">
-                  <div class="col-xl-6">
+                  <div class="col-xl-6" style="padding: 80px 0px;">
                     <p class="p-inputs products">Titulo</p>
-                    <input type="text" class="inputs-survey products">
+                    <input type="text" class="form-control products">
                     <p class="p-inputs products">Subtitulo</p>
-                    <input type="text" class="inputs-survey products">
+                    <input type="text" class="form-control products">
                     <p class="p-inputs products">Marca</p>
-                    <input type="text" class="inputs-survey products">
+                    <input type="text" class="form-control products">
                     <p class="p-inputs products">Modelo</p>
-                    <input type="text" class="inputs-survey products">
+                    <input type="text" class="form-control products">
                   </div>
                   <div class="col-xl-6" style='height: 540px;'>
                     <div class="categary-product">
@@ -434,7 +478,7 @@ function createFieldsProducts(){
               <div id="products-images-fill" class="row container-images-product">
                 <div id="pimage-1" class="col-xl-6 image-products-divs" style="border-right: 1px solid #cfcfcf">
                     <label class="add-photos" for="image-product">Agregar Fotografias</label>
-                    <p class="message-limit">Agrege hasta 10 fotografias de su producto, Recuerden una buena imagen, vende su producto.</p>
+                    <p class="message-limit text-center">Agrege hasta 10 fotografias de su producto, Recuerden una buena imagen, vende su producto.</p>
                 </div>
                 <span id="container-images-fill" class="col-xl-6" style="padding: 0;">
                     <div id="pimage-2" class="col-xl-4 other-images image-products-divs"><i class="far fa-file-image"></i></div>
@@ -469,8 +513,10 @@ function createFieldsProducts(){
 
       $('#add-remove-fields').empty();
       $('#add-remove-fields').append(
-        `<Label class="label-add">Cancelar</Label>
-        <img src="icons/close-blue.svg" class="delete remove-fields-products" onclick="removeFieldsProducts()" alt=""></img>`
+        `<div>
+        <Label class="label-add-close">Cancelar</Label>
+        <img src="icons/close-yellow.svg" class="delete remove-fields-products" onclick="removeFieldsProducts()" alt=""></img>
+        </div>`
       );
 
 }
@@ -480,7 +526,8 @@ function removeFieldsProducts(){
   $('#add-remove-fields').empty();
   $('#add-remove-fields').append(
       `<Label class="label-add">Agregar Nuevo Producto</Label>
-      <button id="more" class="add-more" onclick="createFieldsProducts()" style="top: -12.5px;">+</button>`
+      <button id="more" class="add-more" onclick="createFieldsProducts()" style="top: -13.5px;
+      left: 45px;">+</button>`
       );
   $('#fields-add-product').empty();
 
@@ -584,7 +631,7 @@ function refillContainers(idelementsRemove){
         $('#'+divs[i].id).empty();
         $('#'+divs[i].id).removeAttr("style");
         $('#'+divs[i].id).append(`<label class="add-photos" for="image-product">Agregar Fotografias</label>
-        <p class="message-limit">Agrege hasta 10 fotografias de su producto, Recuerden una buena imagen, vende su producto.</p>`);
+        <p class="message-limit text-center">Agrege hasta 10 fotografias de su producto, Recuerden una buena imagen, vende su producto.</p>`);
       add = false;
       }else{
         $('#'+divs[i].id).empty();
@@ -599,7 +646,71 @@ function refillContainers(idelementsRemove){
       $('#'+divs[i].id).append(`<i class="far fa-file-image">`);
       $('#'+divs[i].id).removeClass('last');
     }
-  }
-  
-  
+  }  
 }
+
+function showCommentPublication(idElemetsFather){
+  var parent = document.querySelector('#'+idElemetsFather);
+  var divs = parent.querySelectorAll('div');
+  
+  console.log(divs);
+  $('#body-modal-images').empty();
+  $('#modal-comments').modal('show');
+  $('#body-modal-images').append(`
+  <div class="row" style="width: 690px;">
+    <div class="col-xl-1">
+        <img src="img/new/logo.jpg" style="border-radius: 50%" width="50px;" alt="">
+    </div>
+    <div class="col-xl-11">
+        <label class="name-company-p">Nissan Company</label><br>
+        <label class="email-direction">nissanCompany@gmail.com</label>
+        <hr>
+    </div>
+  </div>
+  <div id="description-publication" class="col-lx-12 ">
+        <p>${document.getElementById(divs[3].id).innerHTML}</p>
+  </div>
+  <div class="row" style="width: 650px;
+  padding: 0 0px 0px 66px;">
+    <div class="col-xl-12">
+    ${changeEventModal(divs[4].id,idElemetsFather)}
+    </div>
+  </div>
+  <div style="padding: 20px 30px;">
+  <div class="row comment-row">
+  <div class="col-xl-1">
+      <img src="img/naruto.jpg" class="rounded-circle thumbails" style="width: 65px; padding-top: 3px;" alt="">
+  </div>
+  <div class="col-xl-11" style="padding-left: 32px;">
+      <label class="name-company-p">Uzumaki Naruto</label><br>
+      <label class="email-direction">uzumakiDeKonoha@gmail.com</label>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dicta iure, et blanditiis, porro dolor aspernatur quia alias pariatur aperiam debitis odit dolorem, necessitatibus officiis.</p>
+  </div>
+  </div>
+    <div class="row" style="padding-left: 90px;">
+      <a href="#" style="margin-right: 10px;">Responder</a>
+      <a href="#">Me Gusta</a>
+    </div>
+  </div>
+  `);
+
+
+}
+
+function changeEventModal(idfather,idElemetsFather){
+    var parent = document.querySelector('#'+idfather);
+    var divs = parent.querySelectorAll('div');
+    var acumulateHTML='';
+    console.log(divs[0].style.backgroundImage);
+    for(var i=0; i<divs.length; i++){
+      elementComplete = divs[i].style.backgroundImage;
+      elementComplete = elementComplete.slice(5,-2);
+      acumulateHTML += `<div id="addClass" class="${divs[i].className}" onclick="showModal('${elementComplete}','modal','${idElemetsFather}')" style="background-image: url(${elementComplete})"> 
+      </div>\n`;
+    }
+    console.log(acumulateHTML);
+    return acumulateHTML;
+  }
+
+/*divs[i].style.backgroundImage*/
+

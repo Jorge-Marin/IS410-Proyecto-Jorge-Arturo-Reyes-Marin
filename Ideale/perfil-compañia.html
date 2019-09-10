@@ -266,14 +266,27 @@
                                             <div id="container-publications-makes" style="padding: 0px 15px;">
                                             </div>
                                         </div>
-                                        <!-- Modal -->            
-                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <img src="icons/close.svg" data-dismiss="modal" aria-hidden="true" class="delete close-modal" alt="">
+                                        <!-- Modal Image -->            
+                                        <div class="modal fade" id="modal-image" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <img id="btn-close" src="icons/close.svg" data-dismiss="modal" aria-hidden="true" class="delete close-modal" alt="">
                                             <div class="modal-dialog" style="max-width: 1230px;" role="document">
                                                 <div class="modal-content">
                                                 <div class="modal-body">
                                                     <img id="showImage" src='' height="480px" alt="">
                                                 </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="alert-files-size">
+                                            <label class="alert-message">Un Maximo 4 Imagenes, 4 Preguntas Para Encuesta <span onclick="hideAlertFiles()" style="margin-left: 5px;"><img src="icons/close-simple.svg" width="20px" alt=""></span> </label>
+                                        </div>
+                                            
+                                            <!-- Modal Comments-->
+                                        <div class="modal fade" id="modal-comments" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" style="max-width: 740px;" role="document">
+                                                <div class="modal-content" style="background-color: white;">
+                                                    <div id="body-modal-images" class="modal-body">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -291,7 +304,8 @@
                     <div class="container" style="margin-top: 50px;">
                         <div class="col-xl-12" style="padding-left: 76%;">
                             <div id="add-remove-fields" class="row">
-                                <Label class="label-add">Agregar Nuevo Producto</Label><button id="more" class="add-more" onclick="createFieldsProducts()" style="top: -12.5px;">+</button>
+                                <Label class="label-add">Agregar Nuevo Producto</Label><button id="more" class="add-more" onclick="createFieldsProducts()" style="top: -13.5px;
+                                left: 45px;">+</button>
                             </div>
                         </div>
                         <div id="fields-add-product">
@@ -299,81 +313,130 @@
                         </div>
                         <div id="container-products-register">
                                 <div class="row">
-                                    <div class="col-xl-3 p-product-space">
-                                        <div class="container-image-product">
-                                            <div class="rounded-circle descount-circle">
-                                                <label class="descount-label">25%</label>
+                                    <div class="col-md-4">
+                                        <div class="card mb-4 shadow-sm">
+                                          <div class="box">
+                                            <img src="img/new/1jeans.jpg" alt="Image did not load...">
+                                          </div>
+                                          <div class="card-body">
+                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                            Precio de Oferta: <strong>L 7583.25</strong><br>
+                                            Precio Original: <strong><del>L 8000.52</del></strong> 
+                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                              <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver Detalles</button>
+                                              </div>
+                                              <small class="text-muted">Termina en 9 mins</small>
                                             </div>
-                                            <div class="box">
-                                                <img src="https://nestordominguez.com/wp-content/uploads/2017/10/dinosaurios-grande.jpg" alt="Image did not load...">
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <div class="card mb-4 shadow-sm">
+                                          <div class="box">
+                                            <img src="img/new/2jeans.jpg" alt="Image did not load...">
+                                          </div>
+                                          <div class="card-body">
+                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                            Precio de Oferta: <strong>L 7583.25</strong><br>
+                                            Precio Original: <strong><del>L 8000.52</del></strong> 
+                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                              <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver Detalles</button>
+                                              </div>
+                                              <small class="text-muted">Termina en 1:58:04s</small>
                                             </div>
-                                            <div class="description-recients">
-                                                <a href='#'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
-                                                <hr>
-                                                <p class="new-price">Precio: L.1M</p>
-                                                <p class="last-price"><label>L. 1,050,000</label> (0.05% de Descuento)</p>
-                                                <button class="btn-actions-buys">Comprar</button>
-                                                <button class="btn-actions-buys">Al Carrito</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <div class="card mb-4 shadow-sm">
+                                          <div class="box">
+                                            <img src="img/new/3jeans.jpg" alt="Image did not load...">
+                                          </div>
+                                          <div class="card-body">
+                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                            Precio de Oferta: <strong>L 7583.25</strong><br>
+                                            Precio Original: <strong><del>L 8000.52</del></strong> 
+                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                              <div class="btn-group">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver Detalles</button>
+                                              </div>
+                                              <small class="text-muted">Termina en 1:58:04s</small>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <div class="card mb-4 shadow-sm">
+                                          <div class="box">
+                                            <img src="img/new/4jeans.jpg" alt="Image did not load...">
+                                          </div>
+                                          <div class="card-body">
+                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                            Precio de Oferta: <strong>L 7583.25</strong><br>
+                                            Precio Original: <strong><del>L 8000.52</del></strong> 
+                                            </p>
+                                            <div class="d-flex justify-content-between align-items-center">
+                                              <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver Detalles</button>
+                                              </div>
+                                              <small class="text-muted">Termina en 1:58:04s</small>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                            <div class="card mb-4 shadow-sm">
+                                                <div class="box">
+                                                    <img src="img/new/5jeans.jpg" alt="Image did not load...">
+                                                </div>
+                                                <div class="card-body">
+                                                <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                                Precio de Oferta: <strong>L 7583.25</strong><br>
+                                                Precio Original: <strong><del>L 8000.52</del></strong> 
+                                                </p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="btn-group">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver Detalles</button>
+                                                    </div>
+                                                    <small class="text-muted">Termina en 1:58:04s</small>
+                                                </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xl-3 p-product-space">
-                                        <div class="container-image-product">
-                                            <div class="rounded-circle descount-circle">
-                                                <label class="descount-label">10%</label>
-                                            </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-4 shadow-sm">
                                             <div class="box">
-                                                <img src="https://nestordominguez.com/wp-content/uploads/2017/10/dinosaurios-grande.jpg" alt="Image did not load...">
+                                                <img src="img/new/6jeans.jpg" alt="Image did not load...">
                                             </div>
-                                            <div class="description-recients">
-                                                <a href='#'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
-                                                <hr>
-                                                <p class="new-price">Precio: L.1M</p>
-                                                <p class="last-price"><label>L. 1,050,000</label> (0.05% de Descuento)</p>
-                                                <button class="btn-actions-buys">Comprar</button>
-                                                <button class="btn-actions-buys">Al Carrito</button>
-                                            </div>   
+                                            <div class="card-body">
+                                                <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                                Precio de Oferta: <strong>L 7583.25</strong><br>
+                                                Precio Original: <strong><del>L 8000.52</del></strong> 
+                                                </p>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                <div class="btn-group">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver Detalles</button>
+                                                </div>
+                                                <small class="text-muted">Termina en 1:58:04s</small>
+                                                </div>
+                                            </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xl-3 p-product-space">
-                                        <div class="container-image-product">
-                                            <div class="rounded-circle descount-circle">
-                                                <label class="descount-label">15%</label>
-                                            </div>
-                                            <div class="box">
-                                                <img src="https://nestordominguez.com/wp-content/uploads/2017/10/dinosaurios-grande.jpg" alt="Image did not load...">
-                                            </div>
-                                            <div class="description-recients">
-                                                <a href='#'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
-                                                <hr>
-                                                <p class="new-price">Precio: L.1M</p>
-                                                <p class="last-price"><label>L. 1,050,000</label> (0.05% de Descuento)</p>
-                                                <button class="btn-actions-buys">Comprar</button>
-                                                <button class="btn-actions-buys">Al Carrito</button>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-3 p-product-space">
-                                        <div class="container-image-product">
-                                            <div class="rounded-circle descount-circle">
-                                                <label class="descount-label">15%</label>
-                                            </div>
-                                            <div class="box">
-                                                <img src="https://nestordominguez.com/wp-content/uploads/2017/10/dinosaurios-grande.jpg" alt="Image did not load...">
-                                            </div>
-                                            <div class="description-recients">
-                                                <a href='#'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
-                                                <hr>
-                                                <p class="new-price">Precio: L.1M</p>
-                                                <p class="last-price"><label>L. 1,050,000</label> (0.05% de Descuento)</p>
-                                                <button class="btn-actions-buys">Comprar</button>
-                                                <button class="btn-actions-buys">Al Carrito</button>
-                                            </div>
-                                    </div>
-                            </div>
                         </div>
                 </div>
             </div>
+
 
             
             
