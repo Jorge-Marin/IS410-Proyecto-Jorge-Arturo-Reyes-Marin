@@ -2,32 +2,56 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<script src="https://cdn.ckeditor.com/4.8.0/standard-all/ckeditor.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<style type="text/css">
-		/* Minimal styling to add some padding around the editor in this sample */
-		body {
-			padding: 30px;
+		.separador {
+    		background-color: #FAE90E;
+    		height: 30px;
 		}
-		.container {
-			max-width: 1130px;
+
+		.form-control{
+			margin-bottom: 10px;
 		}
+
+		.btn-increment-decrement {
+			font-size: 1rem;
+			font-weight: bold;
+}
 	</style>
 </head>
 <body>
 <div class="container">
-	<textarea id="editor1">
-	</textarea>
+	<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+		Launch demo modal
+	  </button>
+	  
+	  <!-- Modal -->
+	  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document" style="max-width: 710px;">
+		  <div class="modal-content">
+			<div class="modal-body">
+			  <div class="container" style="max-width: 280px;">
+				  <input type="text" class="form-control" placeholder="Precio de Promocion">
+				  <input type="text" class="form-control" placeholder="Precio Original">
+				  <label>Cantidad Valida por Promocion</label>
+				  <span>
+					  
+					  <button class="btn btn-outline-warning btn-increment-decrement">-</button>
+					  <input type="text" class="text-center" value="1"></input>
+					  <button class="btn btn-outline-warning btn-increment-decrement">+</button></span>
+			  </div>
+			</div>
+				<div class="modal-footer container-fluid separador">
+			  </div>
+		  </div>
+		</div>
+	  </div>
 </div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script>
-	CKEDITOR.replace( 'editor1', {
-		toolbar: [
-			{ name: 'clipboard', items: [ 'Undo', 'Redo' ] },
-			{ name: 'styles', items: [ 'Styles', 'Format' ] },
-			{ name: 'basicstyles', items: [ 'Bold', 'Italic'] },
-			{ name: 'paragraph', items: [ 'NumberedList', 'BulletedList'] }
-		],
-		
-	} );
+	$('#exampleModal').modal('show');
 </script>
 </body>
 </html>

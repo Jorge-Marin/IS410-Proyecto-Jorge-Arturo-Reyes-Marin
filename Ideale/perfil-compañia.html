@@ -47,7 +47,7 @@
                     <a class="nav-item nav-link active name-company" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Nissan Company</a>
                     <a class="nav-item nav-link" id="nav-publications-tab" data-toggle="tab" href="#nav-publications" role="tab" aria-controls="nav-publications" aria-selected="true">Publicaciones</a>
                     <a class="nav-item nav-link" id="nav-products-tab" data-toggle="tab" href="#nav-products" role="tab" aria-controls="nav-products" aria-selected="false">Productos</a>
-                    <a class="nav-item nav-link" id="nav-products-tab" data-toggle="tab" href="#nav-products" role="tab" aria-controls="nav-products" aria-selected="false">Promociones</a>
+                    <a class="nav-item nav-link" id="nav-promotions-tab" data-toggle="tab" href="#nav-promotions" role="tab" aria-controls="nav-promotions" aria-selected="false">Promociones</a>
                     <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Sucursales</a>
                     <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Dashboard</a>
                     <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Ficha Promocional</a>
@@ -304,145 +304,338 @@
                     <div class="container" style="margin-top: 50px;">
                         <div class="col-xl-12" style="padding-left: 76%;">
                             <div id="add-remove-fields" class="row">
-                                <Label class="label-add">Agregar Nuevo Producto</Label><button id="more" class="add-more" onclick="createFieldsProducts()" style="top: -13.5px;
-                                left: 45px;">+</button>
+                                <button id="more" class="alert-message add-more" onclick="createFieldsProducts()" style="top: -20.6px;
+                                left: -393px;">Agregar Nuevos Productos +</button>
                             </div>
                         </div>
                         <div id="fields-add-product">
                             <input type="file" id="image-product" multiple>
                         </div>
                         <div id="container-products-register">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="box">
+                                        <img src="img/new/1jeans.jpg" alt="Image did not load...">
+                                        </div>
+                                        <div class="card-body">
+                                        <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                        Precio de Oferta: <strong>L 7583.25</strong><br>
+                                        Precio Original: <strong><del>L 8000.52</del></strong> 
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Actualizar</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Eliminar</button>
+                                            </div>
+                                            <small class="text-muted">Termina en 9 mins</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="box">
+                                        <img src="img/new/2jeans.jpg" alt="Image did not load...">
+                                        </div>
+                                        <div class="card-body">
+                                        <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                        Precio de Oferta: <strong>L 7583.25</strong><br>
+                                        Precio Original: <strong><del>L 8000.52</del></strong> 
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Actualizar</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Eliminar</button>
+                                            </div>
+                                            <small class="text-muted">Termina en 1:58:04s</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="box">
+                                        <img src="img/new/3jeans.jpg" alt="Image did not load...">
+                                        </div>
+                                        <div class="card-body">
+                                        <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                        Precio de Oferta: <strong>L 7583.25</strong><br>
+                                        Precio Original: <strong><del>L 8000.52</del></strong> 
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">Actualizar</button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary">Eliminar</button>
+                                            </div>
+                                            <small class="text-muted">Termina en 1:58:04s</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="box">
+                                        <img src="img/new/4jeans.jpg" alt="Image did not load...">
+                                        </div>
+                                        <div class="card-body">
+                                        <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                        Precio de Oferta: <strong>L 7583.25</strong><br>
+                                        Precio Original: <strong><del>L 8000.52</del></strong> 
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Actualizar</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Eliminar</button>
+                                            </div>
+                                            <small class="text-muted">Termina en 1:58:04s</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                        <div class="box">
+                                            <img src="img/new/5jeans.jpg" alt="Image did not load...">
+                                        </div>
+                                        <div class="card-body">
+                                        <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                        Precio de Oferta: <strong>L 7583.25</strong><br>
+                                        Precio Original: <strong><del>L 8000.52</del></strong> 
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Actualizar</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Eliminar</button>
+                                            </div>
+                                            <small class="text-muted">Termina en 1:58:04s</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card mb-4 shadow-sm">
+                                    <div class="box">
+                                        <img src="img/new/6jeans.jpg" alt="Image did not load...">
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                        Precio de Oferta: <strong>L 7583.25</strong><br>
+                                        Precio Original: <strong><del>L 8000.52</del></strong> 
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Actualizar</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Eliminar</button>
+                                        </div>
+                                        <small class="text-muted">Termina en 1:58:04s</small>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-promotions" role="tabpanel" aria-labelledby="nav-promotions-tab">
+                    <div class="container" style="margin-top: 50px;">
+                        <div class="row" style="padding-left: 25%;">
+                            <div class="input-group">
+                                <input type="text" class="form-control rounded-input-text" placeholder="Buscar Producto" aria-label="Text input with segmented dropdown button">
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-outline-secondary" style="height: 38.3px;"><i class="fas fa-search"></i></button>
+                                    <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split rounded-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <label for="">Filtrar Por &nbsp;</label>
+                                        <span class="sr-only">Toggle Dropdown</span>
+                                    </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                            <div role="separator" class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="container-products-register">
+                            <div class="row">
+                                <h3 style="margin-top:25px;  margin-bottom: 0px">Productos En Promocion</h3>
+                            </div>
+                            <hr style="width: 95%; margin-top: 0px; background-color: #495057">
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="card mb-4 shadow-sm">
-                                          <div class="box">
-                                            <img src="img/new/1jeans.jpg" alt="Image did not load...">
-                                          </div>
-                                          <div class="card-body">
-                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
-                                            Precio de Oferta: <strong>L 7583.25</strong><br>
-                                            Precio Original: <strong><del>L 8000.52</del></strong> 
-                                            </p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                              <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver Detalles</button>
-                                              </div>
-                                              <small class="text-muted">Termina en 9 mins</small>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <div class="card mb-4 shadow-sm">
-                                          <div class="box">
-                                            <img src="img/new/2jeans.jpg" alt="Image did not load...">
-                                          </div>
-                                          <div class="card-body">
-                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
-                                            Precio de Oferta: <strong>L 7583.25</strong><br>
-                                            Precio Original: <strong><del>L 8000.52</del></strong> 
-                                            </p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                              <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver Detalles</button>
-                                              </div>
-                                              <small class="text-muted">Termina en 1:58:04s</small>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <div class="card mb-4 shadow-sm">
-                                          <div class="box">
-                                            <img src="img/new/3jeans.jpg" alt="Image did not load...">
-                                          </div>
-                                          <div class="card-body">
-                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
-                                            Precio de Oferta: <strong>L 7583.25</strong><br>
-                                            Precio Original: <strong><del>L 8000.52</del></strong> 
-                                            </p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                              <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver Detalles</button>
-                                              </div>
-                                              <small class="text-muted">Termina en 1:58:04s</small>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <div class="card mb-4 shadow-sm">
-                                          <div class="box">
-                                            <img src="img/new/4jeans.jpg" alt="Image did not load...">
-                                          </div>
-                                          <div class="card-body">
-                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
-                                            Precio de Oferta: <strong>L 7583.25</strong><br>
-                                            Precio Original: <strong><del>L 8000.52</del></strong> 
-                                            </p>
-                                            <div class="d-flex justify-content-between align-items-center">
-                                              <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver Detalles</button>
-                                              </div>
-                                              <small class="text-muted">Termina en 1:58:04s</small>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="col-md-4">
-                                            <div class="card mb-4 shadow-sm">
-                                                <div class="box">
-                                                    <img src="img/new/5jeans.jpg" alt="Image did not load...">
-                                                </div>
-                                                <div class="card-body">
-                                                <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
-                                                Precio de Oferta: <strong>L 7583.25</strong><br>
-                                                Precio Original: <strong><del>L 8000.52</del></strong> 
-                                                </p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver Detalles</button>
-                                                    </div>
-                                                    <small class="text-muted">Termina en 1:58:04s</small>
-                                                </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="card mb-4 shadow-sm">
                                             <div class="box">
-                                                <img src="img/new/6jeans.jpg" alt="Image did not load...">
+                                            <img src="img/new/1jeans.jpg" alt="Image did not load...">
                                             </div>
                                             <div class="card-body">
-                                                <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
-                                                Precio de Oferta: <strong>L 7583.25</strong><br>
-                                                Precio Original: <strong><del>L 8000.52</del></strong> 
-                                                </p>
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
-                                                    <button type="button" class="btn btn-sm btn-outline-secondary">Ver Detalles</button>
-                                                </div>
-                                                <small class="text-muted">Termina en 1:58:04s</small>
-                                                </div>
-                                            </div>
+                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                            Precio de Oferta: <strong>L 7583.25</strong><br>
+                                            Precio Original: <strong><del>L 8000.52</del></strong> 
+                                            </p>
+                                            <!-- Rounded switch -->
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card mb-4 shadow-sm">
+                                            <div class="box">
+                                            <img src="img/new/2jeans.jpg" alt="Image did not load...">
+                                            </div>
+                                            <div class="card-body">
+                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                            Precio de Oferta: <strong>L 7583.25</strong><br>
+                                            Precio Original: <strong><del>L 8000.52</del></strong> 
+                                            </p>
+                                            <!-- Rounded switch -->
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card mb-4 shadow-sm">
+                                            <div class="box">
+                                            <img src="img/new/3jeans.jpg" alt="Image did not load...">
+                                            </div>
+                                            <div class="card-body">
+                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                            Precio de Oferta: <strong>L 7583.25</strong><br>
+                                            Precio Original: <strong><del>L 8000.52</del></strong> 
+                                            </p>
+                                            <!-- Rounded switch -->
+                                            <label class="switch">
+                                                <input type="checkbox" id="checkbox-active-promotion" checked onclick="statePromotion()">
+                                                <span class="slider round">
+                                                </span>
+                                            </label>
+                                            <small id="label-promotions" class="text-muted active-promotion" style="padding-left: 4.2px; float: left;">Promocion En Vigencia</small>
+                                            <small id="countDown-id" class="text-muted active-promotion"></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="row">
+                                        <h3 style="margin-top:25px; margin-bottom: 0px">Productos Fuera Promocion</h3>
+                                    </div>
+                                    <hr style="width: 95%; margin-top: 0px; background-color: #495057">
+                                    <div class="col-md-4">
+                                        <div class="card mb-4 shadow-sm">
+                                            <div class="box">
+                                            <img src="img/new/4jeans.jpg" alt="Image did not load...">
+                                            </div>
+                                            <div class="card-body">
+                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                            Precio de Oferta: <strong>L 7583.25</strong><br>
+                                            Precio Original: <strong><del>L 8000.52</del></strong> 
+                                            </p>
+                                            <!-- Rounded switch -->
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card mb-4 shadow-sm">
+                                            <div class="box">
+                                                <img src="img/new/5jeans.jpg" alt="Image did not load...">
+                                            </div>
+                                            <div class="card-body">
+                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                            Precio de Oferta: <strong>L 7583.25</strong><br>
+                                            Precio Original: <strong><del>L 8000.52</del></strong> 
+                                            </p>
+                                            <!-- Rounded switch -->
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="card mb-4 shadow-sm">
+                                        <div class="box">
+                                            <img src="img/new/6jeans.jpg" alt="Image did not load...">
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text"><a href="" class="description-message">This is a wider card with  supporting text below as a natural.</a><br>
+                                            Precio de Oferta: <strong>L 7583.25</strong><br>
+                                            Precio Original: <strong><del>L 8000.52</del></strong> 
+                                            </p>
+                                            <!-- Rounded switch -->
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider round"></span>
+                                            </label>
+                                            <small class="text-muted">Termina en 1:58:04s</small>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="details-promotions" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document" style="max-width: 480px;">
+                                    <div class="modal-content" style="background-color: white;">
+                                    <div class="modal-body">
+                                        <div class="row" style="padding-left: 9%;">
+                                            <h3>Detalles de Promocion</h3>
+                                        </div>	
+                                        <hr style="background: gray;">
+                                        <div class="container" style="padding: 25px 10px;">
+                                            <label class="label-fields">Precio de Promocion</label>
+                                            <input type="text" class="form-control rounded-input-text" placeholder="Precio de Promocion: L. 0000.00">
+                                            <label class="label-fields">Precio Original</label>
+                                            <input type="text" class="form-control rounded-input-text" placeholder="Precio Original: L. 0000.00">
+                                            <label for="" class="label-fields">Cantidad de Productos por ese Precio</label>
+                                            <div class="quantity-input">
+                                            <button id="decrement" class="quantity-input__modifier quantity-input__modifier--left increment-decrement" onclick="decrement()">—</button>
+                                            <input type="text" id="value-size" class="quantity-input__screen" value="1">
+                                            <button id="increment" class="quantity-input__modifier quantity-input__modifier--right increment-decrement" onclick="increment()">＋</button>
+                                            </div>
+                                            <label for="" class="label-fields">Duracion de la Promocion</label>
+                                            <div class="container-time">
+                                                <select class="form-control duration-select rounded-input-text" name="" id="days">
+                                                    <option>Dias</option>
+                                                </select>
+                                                <select class="form-control duration-select rounded-input-text" name="" id="hours">
+                                                    <option>Horas</option>
+                                                </select>
+                                                <select class="form-control duration-select rounded-input-text" name="" id="minutes">
+                                                    <option>Minutos</option>
+                                                </select>
+                                            </div>
+                                            <div class="row">
+                                            <button type="button" class="btn btn-dark" style="margin-left: 25%;">Activar Promocion</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <div class="container-fluid separador">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
                 </div>
-            </div>
 
 
             
             
 
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>  
     <script src="https://cdn.ckeditor.com/4.8.0/standard-all/ckeditor.js"></script>
     <script src="js/profile-actions.js"></script>
 </body>

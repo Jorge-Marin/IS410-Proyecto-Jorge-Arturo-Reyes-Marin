@@ -367,29 +367,31 @@ function showsurveyElement(idChangeText){
     `<div id="container-element-survey">
       <img src="icons/close-blue.svg" class="delete close-survey" onclick="closeSurvey()" alt="">
       <p class="p-inputs" style="margin-top: 45px;">Opcion 1</p>
-      <input type="text" class="inputs-survey">
+      <input type="text" class="inputs-survey form-control rounded-input-text" placeholder='Opcion 1'>
 
       <p class="p-inputs">Opcion 2</p>
-      <input type="text" class="inputs-survey"><button id="more" class="add-more" onclick="addOneElement('more',2)">+</button>
+      <input type="text" class="inputs-survey form-control rounded-input-text" placeholder='Opcion 2'><button id="more" class="add-more" onclick="addOneElement('more',2)">+</button>
       <div id="more-option">
 
       </div>
-      <label>Duracion de la Encuesta</label><br>
-      <select name="" id="days">
-          <option value="0">0 Dias</option>
-          <option value="1">1 Dias</option>
-          <option value="2">2 Dias</option>
-          <option value="3">3 Dias</option>
-          <option value="4">4 Dias</option>
-          <option value="5">5 Dias</option>
-          <option value="6">6 Dias</option>
-      </select>
-      <select name="" id="hours">
-          <option value="0">0 horas</option>
-      </select>
-      <select name="" id="minutes">
-          <option value="0">0 Minutos</option>
-      </select>
+      <div>
+        <label class="p-inputs">Duracion de la Encuesta</label><br>
+        <select name="" class='form-control duration-select rounded-input-text' id="days">
+            <option value="0">0 Dias</option>
+            <option value="1">1 Dias</option>
+            <option value="2">2 Dias</option>
+            <option value="3">3 Dias</option>
+            <option value="4">4 Dias</option>
+            <option value="5">5 Dias</option>
+            <option value="6">6 Dias</option>
+        </select>
+        <select name="" class='form-control duration-select rounded-input-text' id="hours">
+            <option value="0">0 horas</option>
+        </select>
+        <select name="" class='form-control duration-select rounded-input-text' id="minutes">
+            <option value="0">0 Minutos</option>
+        </select>
+      </div>
     </div>`
   );
 
@@ -404,7 +406,7 @@ function addOneElement(id, numberNext){
   let forAdd = `<button id="${id}" class="add-more" onclick="addOneElement('${id}',${numberNext+1})">+</button>`
   $('#more-option').append(
     `<p class="p-inputs">Opcion ${numberNext+1}</p>
-    <input type="text" class="inputs-survey">${(numberNext+1==4?'':forAdd)}`
+    <input type="text" class="inputs-survey form-control rounded-input-text" placeholder='Opcion ${numberNext+1}'>${(numberNext+1==4?'':forAdd)}`
   );
 }
 
@@ -446,15 +448,15 @@ function createFieldsProducts(){
                     <label class="add-pictures-label">Detalles del Producto</label><br>
                   </div>
                 <div class="row" style="padding: 25px 10px 0px 120px;">
-                  <div class="col-xl-6" style="padding: 80px 0px;">
+                  <div class="col-xl-6" style="padding: 20px 0px;">
                     <p class="p-inputs products">Titulo</p>
-                    <input type="text" class="form-control products">
+                    <input type="text" class="form-control products rounded-input-text" placeholder='Titulo del Producto'>
                     <p class="p-inputs products">Subtitulo</p>
-                    <input type="text" class="form-control products">
+                    <input type="text" class="form-control products rounded-input-text" placeholder='Subtitulo'>
                     <p class="p-inputs products">Marca</p>
-                    <input type="text" class="form-control products">
+                    <input type="text" class="form-control products rounded-input-text" placeholder='Marca'>
                     <p class="p-inputs products">Modelo</p>
-                    <input type="text" class="form-control products">
+                    <input type="text" class="form-control products rounded-input-text" placeholder='Modelo'>
                   </div>
                   <div class="col-xl-6" style='height: 540px;'>
                     <div class="categary-product">
@@ -514,8 +516,8 @@ function createFieldsProducts(){
       $('#add-remove-fields').empty();
       $('#add-remove-fields').append(
         `<div>
-        <Label class="label-add-close">Cancelar</Label>
-        <img src="icons/close-yellow.svg" class="delete remove-fields-products" onclick="removeFieldsProducts()" alt=""></img>
+        <button id="more" class="alert-message add-more" onclick="removeFieldsProducts()" style="top: -20.6px;
+        left: -393px;">Remover Campos <img src="icons/close-simple.svg" width="20px" alt=""></button>
         </div>`
       );
 
@@ -525,9 +527,8 @@ function createFieldsProducts(){
 function removeFieldsProducts(){
   $('#add-remove-fields').empty();
   $('#add-remove-fields').append(
-      `<Label class="label-add">Agregar Nuevo Producto</Label>
-      <button id="more" class="add-more" onclick="createFieldsProducts()" style="top: -13.5px;
-      left: 45px;">+</button>`
+      `<button id="more" class="alert-message add-more" onclick="createFieldsProducts()" style="top: -20.6px;
+      left: -393px;">Agregar Nuevos Productos +</button>`
       );
   $('#fields-add-product').empty();
 
@@ -712,5 +713,86 @@ function changeEventModal(idfather,idElemetsFather){
     return acumulateHTML;
   }
 
-/*divs[i].style.backgroundImage*/
+
+function statePromotion(){
+  console.log($('#checkbox-active-promotion').is(':checked'));
+  if($('#checkbox-active-promotion').is(':checked')){
+    $('#label-promotions').html(`Promocion en Vigencia`);
+    $('#details-promotions').modal('show');
+    for(var i=0; i<8; i++){
+      $('#days').append(`<option value(${i})>${i}</option>`);
+    }
+  
+    for(var i=0; i<24; i++){
+      $('#hours').append(`<option value(${i})>${i}</option>`);
+    }
+  
+    for(var i=0; i<60; i++){
+      $('#minutes').append(`<option value(${i})>${i}</option>`);
+    }
+  }else{
+    $('#label-promotions').html(`Promocion Desactivada`);
+  }
+}
+
+
+function countDown(){
+  var end = new Date('9/12/2019 4:30 PM');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0){
+
+            clearInterval(timer);
+            document.getElementById('countDown-id').innerHTML = 'Expiro';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('countDown-id').innerHTML = days + ':';
+        document.getElementById('countDown-id').innerHTML += hours + ':';
+        document.getElementById('countDown-id').innerHTML += minutes + ':';
+        document.getElementById('countDown-id').innerHTML += seconds + ' seg';
+    }
+
+    timer = setInterval(showRemaining, 1000);
+}
+countDown();
+
+
+function decrement() {
+  value = parseInt($('#value-size').val());
+  if(1<value){
+    $('#value-size').val(value-1);
+  }	
+}	
+
+function increment() {
+  value = parseInt($('#value-size').val());
+  if(value<20){
+    $('#value-size').val(value+1);
+  }
+}
+
+
+
+	
+
+
+/*divs[i].style.backgroundImage
+
+
+
+*/
 
