@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Company</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/company-registration.css">
+    <link rel="stylesheet" href="css/profile-company.css">
+    <link rel="stylesheet" href="css/admin-company.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="row">
+        <div class="col-3 navbar-vertical">
+            <div class="col-auto label-profile">
+                <h4 style="font-weight: 600; margin: 25px; font-size: larger;">Perfil de Su Empresa</h4>
+            </div>
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <div style="padding-left: 14%;">
+                <div>
+                    <img src="img/0.png" width="80px;" class="img-profile" alt="">
+                </div>
+                <div>
+                    <h4 class="name-company">Coca-Cola Company (HN)</h4>
+                </div>
+            </div>
+            <div class="dude">
+                <hr style="background-color: #FAE90E; height: 2px; width: 85%;">
+                    <i class="fas fa-exclamation-circle" style="font-size: 2rem;"></i>
+                    <label class="message-for-user">En esta seccion usted podra administrar el perfil de su Empresa.</label>
+                <hr style="background-color: #FAE90E; height: 2px; width: 85%;">
+            </div>
+            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true"><i class="far fa-user"></i> Perfil</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false"><i class="fas fa-map-marked-alt"></i> Registro De Sucursales</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fas fa-boxes"></i> Registro de Procuctos</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-award"></i> Registro de Promociones</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-chart-line"></i> DashBoard</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="far fa-address-card"></i> Ficha Promocional</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fas fa-user-shield"></i> Seguridad</a>
+            </div>
+        </div>
+        <div class="col-9" style="padding-right: 0px">
+            <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div id="banner" class="container-fluid carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators" id="ol-indicators">
+                            <li data-target="#banner" data-slide-to="(1)" class="active"></li>
+                            <li data-target="#banner" data-slide-to="(2)"></li>
+                        </ol>
+                        <div id="carousel-image" class="carousel-inner container-fluid">
+                            <div class="add-banner">
+                                <label data-toggle="modal" data-target="#changeBanner" class="label-banner"><img src="icons/camera-solid.svg" width="25px;" alt=""> &nbsp Agregar o Cambiar Banner</label>
+                                <span class="tooltiptext">1064px * 395px</span>
+                            </div>
+                            <div class="social-networks">
+                                <a href="https://www.facebook.com/CocaColaHN/?brand_redir=40796308305" target="_blank"><img src="icons/facebook-icon.svg" width="33px" alt=""></a>
+                                <a href="https://twitter.com/CocaCola?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank"><img src="icons/twitter-icon.svg" width="33px" alt=""></a>
+                                <a href="https://www.instagram.com/cocacola/?hl=en" target="_blank"><img src="icons/instagram.svg" width="33px" alt=""></a>
+                            </div>
+                            <div class="carousel-item active position-carousel">
+                                <img src="img/Coca-Cola1.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item position-carousel">
+                                <img src="img/Coca-Cola2.png" class="d-block w-100">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#banner" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <div class="row  information-basic" style="padding: 100px 255px;">
+                        <div class="container-image-profile" id="profile-image">
+                            <div class="update">
+                                <i class="fas fa-user-edit update-image-company"></i>
+                            </div>
+                            <div>
+                                <input type="file" name="" id="changeImageProfile">
+                                <label class="show-more" for="changeImageProfile">Actualizar</label>
+                            </div>
+                        </div>
+                        <div class="col-hr-vr">
+                            <hr class="hr-vertical">
+                        </div>
+                        <div>
+                            <h1 class="name-company-big">Coca-Cola Company</h1>
+                        </div>
+                    </div>
+                    <div class="container-fluid fn">
+                    </div>
+                    <div class="row information-company" id="displayInformationCompany">
+                        <div class="col-xl-6" style="padding: 25px 0px 0 25px;">
+                            <div class="col-xl-12">
+                                <h3><i class="far fa-lightbulb"></i> Mision</h3>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel tempore non sit sed delectus impedit temporibus laudantium voluptatibus consequatur tenetur.</p>
+                            </div>
+                            <div class="col-xl-12">
+                                <h3><i class="fas fa-glasses"></i> Vision</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo repellat quasi iure accusamus ea aliquam. Maxime ipsum unde dolores facilis?</p>
+                            </div>
+                            <div class="col-xl-12">
+                                <h3><i class="fas fa-directions"></i> Direccion</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo repellat quasi iure accusamus ea aliquam. Maxime ipsum unde dolores facilis?</p>
+                            </div>
+                            <div class="col-xl-12">
+                                <h3><i class="fas fa-phone-square-alt"></i> Telefonos</h3>
+                                <p>+504 98979647 <b>|</b> +504 89752352 <b>|</b> +504 98576236 </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-6" style="padding: 30px 0px">
+                            <div class="row">
+                               <div onclick="showFields()">
+                                   <label for="" id="create-fields-update"><i class="far fa-edit edit-fields"></i> Actualizar Campos</label> 
+                               </div> 
+                                <div class="col-xl-12" style="background-image: url(img/mapa.png);
+                                height: 400px;">
+                                </div>
+                            </div>
+                        </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-xl-12" id="container-update-fields">
+                    </div>  
+                </div>
+                 <div class="row ultimate-promotions" style="background-color: #2C2C2C;">
+                     <div class="col-xl-4 title-new-promotions">
+                         <h4 style="font-size: 3.1rem;">Hecha Un Vistazo A Nuestras Nuevas Promociones <i class="far fa-smile-wink"></i></h4>
+                     </div>
+                     <div class="col-xl-8 container">
+                         <div class="container-promotions">
+                            <div class="image-upper-1" style="background-image: url(img/promociones/2.jpg);">
+                                <div>
+                                    <label class="show-more">Mostrar<br>Informacion</label>
+                                </div>
+                            </div>
+                            <div class="image-upper-2" style="background-image: url(img/promociones/3.jpg);">
+                                <div>
+                                    <label class="show-more">Mostrar<br>Informacion</label>
+                                </div>
+                            </div>
+                            <div class="image-upper-3" style="background-image: url(img/promociones/4.jpg);">
+                                <div>
+                                    <label class="show-more">Mostrar<br>Informacion</label>
+                                </div>
+                            </div>
+                            <div class="image-upper-4" style="background-image: url(img/promociones/5.jpg);">
+                                <div>
+                                    <label class="show-more">Mostrar<br>Informacion</label>
+                                </div>
+                            </div>
+                            <div class="image-upper-5" style="background-image: url(img/promociones/6.jpg);">
+                                <div>
+                                    <label class="show-more">Mostrar<br>Informacion</label>
+                                </div>
+                            </div>
+                            <div class="image-down" style="background-image: url(img/promociones/1.jpg);">
+                                <div>
+                                    <label class="show-more">Mostrar<br>Informacion</label>
+                                </div>
+                            </div>
+                         </div>
+                    </div>
+                 </div>
+                <div class="container-fluid outstanding">
+                    <h1>Oferta Destacada</h1>
+                    <hr>
+                    <div class="col-xl-12">
+                        <div class="row" style="padding: 40px 100px;">
+                            <div class="col-xl-3">
+                                <img src="img/Mayor Exito/freezer.png" alt="" width="200px">
+                            </div>
+                            <div class="col-xl-8" style="padding: 10px 0px;
+                            text-align: justify;">
+                                <h3 style="font-weight: 800;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, enim.</h3>
+                                <h5>Precio: L. 1140</h5>
+                                <p style="text-decoration: line-through; font-size: 1.2rem;">L. 2280</p>
+                                <a href="#" style="font-size: 1.5rem;">Ver Mas Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid fn-bar">
+                    <h2 class="for-nav-promotions">Todas las Promociones</h2>
+                    <hr class="hr-nav-promotions">
+                    <div class="container">
+                        <input type="text" class="input-search" placeholder="Buscar Promocion o Producto" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                            <select name="" id="" class="select-fill">
+                                <option value="">Todas las Promociones</option>
+                                <option value="">Promociones Recientes</option>
+                                <option value="">Destacadas</option>
+                                <option value="">Promociones Vencidad</option>
+                            </select>
+                            <button class="btn-search" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 container-products">
+                    <div class="row">
+                        <div class="col-xl-3">
+                            <div class="card">
+                                <div class="card-img-top" style="background-image: url(img/productos/1.jpg);">
+                                </div>
+                                <div class="card-body">
+                                    <p class="price-title">$19.54</p>
+                                    <span><label class="price-message">Precio:</label><label class="price-message" style="text-decoration: line-through;">&nbsp;$18.49</label><label class="price-message">&nbsp; (11% de descuento)</label></span>
+                                    <span>
+                                        <hr class="progress-bar">
+                                        <label class="time">Lorem, ipsum. 4:59:25</label>
+                                    </span>
+                                    <span style="float: left; margin-bottom: 15px;">
+                                        <a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, atque.</a>
+                                    </span>
+                                    <span style="float: left;">
+                                        <p class="distributed">Lorem ipsum dolor sit amet consectetur.</p>
+                                    </span>
+                                    <button class="btn-add-buy">Agregar a Compras</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="card">
+                                <div class="card-img-top" style="background-image: url(img/productos/2.webp);">
+                                </div>
+                                <div class="card-body">
+                                    <p class="price-title">$19.54</p>
+                                    <span><label class="price-message">Precio:</label><label class="price-message" style="text-decoration: line-through;">&nbsp;$18.49</label><label class="price-message">&nbsp; (11% de descuento)</label></span>
+                                    <span>
+                                        <hr class="progress-bar">
+                                        <label class="time">Lorem, ipsum. 4:59:25</label>
+                                    </span>
+                                    <span style="float: left; margin-bottom: 15px;">
+                                        <a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, atque.</a>
+                                    </span>
+                                    <span style="float: left;">
+                                        <p class="distributed">Lorem ipsum dolor sit amet consectetur.</p>
+                                    </span>
+                                    <button class="btn-add-buy">Agregar a Compras</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="card">
+                                <div class="card-img-top" style="background-image: url(img/productos/3.jpg);">
+                                </div>
+                                <div class="card-body">
+                                    <p class="price-title">$19.54</p>
+                                    <span><label class="price-message">Precio:</label><label class="price-message" style="text-decoration: line-through;">&nbsp;$18.49</label><label class="price-message">&nbsp; (11% de descuento)</label></span>
+                                    <span>
+                                        <hr class="progress-bar">
+                                        <label class="time">Lorem, ipsum. 4:59:25</label>
+                                    </span>
+                                    <span style="float: left; margin-bottom: 15px;">
+                                        <a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, atque.</a>
+                                    </span>
+                                    <span style="float: left;">
+                                        <p class="distributed">Lorem ipsum dolor sit amet consectetur.</p>
+                                    </span>
+                                    <button class="btn-add-buy">Agregar a Compras</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3">
+                            <div class="card">
+                                <div class="card-img-top" style="background-image: url(img/productos/4.png);">
+                                </div>
+                                <div class="card-body">
+                                    <p class="price-title">$19.54</p>
+                                    <span><label class="price-message">Precio:</label><label class="price-message" style="text-decoration: line-through;">&nbsp;$18.49</label><label class="price-message">&nbsp; (11% de descuento)</label></span>
+                                    <span>
+                                        <hr class="progress-bar">
+                                        <label class="time">Lorem, ipsum. 4:59:25</label>
+                                    </span>
+                                    <span style="float: left; margin-bottom: 15px;">
+                                        <a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, atque.</a>
+                                    </span>
+                                    <span style="float: left;">
+                                        <p class="distributed">Lorem ipsum dolor sit amet consectetur.</p>
+                                    </span>
+                                    <button class="btn-add-buy">Agregar a Compras</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                <div class="container-fluid fn-bar" style="height: 160px;">
+                    <h2 class="for-nav-promotions">Registre su Producto</h2>
+                    <hr class="hr-nav-promotions">
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <label for="" style="margin-right:25px;">Nombre del Producto</label>
+                            <input type="text" class="input-search" style="width: 80% !important; float:initial">
+                        </div>
+                        <div class="col-xl-4">
+                            <label for="" style="margin-right:25px;">Presio ($)</label>
+                            <input type="text" class="input-search" style="width: 80% !important; float:initial">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal-->
+    <div class="modal fade" id="changeBanner" tabindex="-1" role="dialog" aria-labelledby="changeImageProfile" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="changeBannerTitle">Archivos Recientes</h5>
+                <input type="file" id="select">
+                <label for="select" class="btn-yellow-modal" style="margin-left: auto;">Subir Nuevos</label>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 pad-background">
+                            <div class="recients" style="background-image: url(img/Coca-Cola1.jpg)">
+                            </div>
+                        </div>
+                        <div class="col-xl-3 pad-background">
+                            <div class="recients" style="background-image: url(img/on.png)">
+                            </div>
+                        </div>
+                        <div class="col-xl-3 pad-background">
+                            <div class="recients" style="background-image: url(img/on.png)">
+                            </div>
+                        </div>
+                        <div class="col-xl-3 pad-background">
+                            <div class="recients" style="background-image: url(img/Coca-Cola1.jpg)">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn-yellow-modal">Seleccionar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/admin-actions.js"></script>
+</body>
+</html>
+
+<!---->

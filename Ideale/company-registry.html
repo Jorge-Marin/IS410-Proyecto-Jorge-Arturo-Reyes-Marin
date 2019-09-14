@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Company Registration</title>
+    <link rel="stylesheet" href="css/all.css"><!--Font Awesome-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/company-registration.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-cool">
+        <div class="container" style="background-color: transparent;">
+            <div class="row">
+                <div class="col-xl-5">
+                    <div class="container-logo">
+                        <img class="logo-company" src="img/logo-ideale.png">
+                    </div>
+                </div>
+                <div class="col-hr-vr">
+                    <hr class="hr-vertical">
+                </div>
+                <div class="col-xl-5">
+                    <div>
+                        <h2 style="color: white; font-weight: bolder;">Abrir una Cuentra para Empresa</h2>
+                        <label class="label-publicity">Bienvenido a la nueva era del marketing digital.
+                            <br>
+                            Que el mundo se entere quien eres!
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contaiener-fluid fst">
+        <h2>Agrega un Banner Publicitario</h2>
+    </div>
+    <div id="banner" class="container-fluid carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators" id="ol-indicators">
+        </ol>
+        <div id="carousel-image" class="carousel-inner">
+            <div class="add-banner">
+                <input type="file" id="file-banner" multiple>
+                <label for="file-banner" class="label-banner"><img src="icons/camera-solid.svg" width="25px;" alt=""> &nbsp Add or Change your Banner</label>
+                <span class="tooltiptext">1064px * 395px</span>
+            </div>
+        </div>
+        <div class="container-fluid message-publicity" id="div-message-publicity">
+            <i class="fas fa-laugh" style="font-size: 5rem; color: #2C2C2C;"></i>
+            <br>
+            <label style="font-size: 2.3rem;">Recuerda Tu Imagen Importa</label>
+        </div>
+        <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#banner" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+        </a>
+        <div class="logotype-container" id="logotype">
+            <div class="logotype">
+                <input type="file" id="file-logotype">
+                <label for="file-logotype" class="label-logotype"><img src="icons/camera-solid.svg" width="20px;" alt="">&nbsp Logotype</label>
+                <span class="tooltiptext">200px * 200px</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 contain-fields">
+                <label>Nombre de la Empresa</label><br>
+                <input class="form-control" type="text" placeholder="Ideale">
+                <label>Email</label>
+                <div>
+                    <label class="sr-only" for="email">Email</label>
+                    <div class="input-group mb-2">
+                        <div class="input-group-prepend">
+                        <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text" class="form-control" id="email" placeholder="Email">
+                    </div>
+                </div>
+                <label>Contraseña</label><br>
+                <input class="form-control" type="password" placeholder="Contraseña" autocomplete="new-password">
+                <label>Numero Telefonico</label>
+                <input class="form-control" type="text" placeholder="Numero Telefonico">
+                <label>Direccion</label><br>
+                <textarea id="text-direction" class="form-control" rows="3" placeholder=""></textarea>
+                <label>Pais</label>
+                <select id="select-country" class="form-control">
+                    <option value="honduras">Honduras</option>
+                    <option value="costaRica">Costa Rica</option>
+                    <option value="salvador">El Salvador</option>
+                    <option value="nicaragua">Nicaragua</option>
+                    <option value="guatemala">Guatemala</option>
+                </select>
+            </div>
+            <div class="col-xl-6 map-position">
+                <h2>Su Ubicacion</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="row information">
+                <div class="col-xl-6">
+                    <label style="font-size: 1.4rem; padding-left: 10px;">Mision</label>
+                    <textarea class="w-do-area" placeholder=""></textarea>
+                </div>
+                <div class="col-xl-6">
+                    <label style="font-size: 1.4rem; padding-left: 10px;">Vision</label>
+                    <textarea class="w-do-area" placeholder=""></textarea>
+                </div>
+        </div>    
+        <div class="row">
+            <div class="col-xl-12 social">
+                <span><img src="icons/facebook-icon.svg" alt="" width="45px"><input type="text" name="" id="" class="form-control social-input" placeholder="Facebook"></span>
+                <span><img src="icons/twitter-icon.svg" alt="" width="45px"><input type="text" name="" id="" class="form-control social-input" placeholder="Twitter"></span>
+                <span><img src="icons/instagram.svg" alt="" width="45px"><input type="text" name="" id="" class="form-control social-input" placeholder="Instagram"></span>
+            </div>
+            <div class="col-xl-12 btn-register-container">
+                <button  id="btn-registrar">Finalizar Registro</button>
+            </div>
+        </div>   
+    </div> 
+    <div class="container-fluid fn">  
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvzwuQ01uWaqAinM57xUReChAFHDRZf-s&callback=initMap"
+    async defer></script>
+    <script src="js/company-registration.js"></script>
+</body> 
+</html>

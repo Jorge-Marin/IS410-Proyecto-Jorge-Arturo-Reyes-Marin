@@ -1,0 +1,315 @@
+body{
+    background-color: #2C2C2C;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.container-logo{
+    align-content: center;
+    margin-left: auto;
+    margin-bottom: 10px;
+    width: 120px;
+}
+
+.logo-company{
+    width: 120px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+label{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #212529ab;
+    margin: 5px 0px 5px 0px;
+}
+
+.form-control{
+    margin-bottom: 15px;
+}
+
+.title-create{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.input-group-text{
+    background-color: #FAE90E;
+    color: white;
+    font-weight: 600;
+}
+
+#map-company{
+    width: 683.9px;
+    height: 480px;
+    border-radius: 5px;
+}
+
+.contain-fields{
+     padding: 20px 40px 20px 40px;
+     max-width: 40%;
+}
+
+.label-publicity{
+    color: white;
+    font-weight: lighter;
+}
+
+.social{
+    padding-left: 27%;
+    margin: 25px 0px 25px 0px;
+}
+
+.social .form-control{
+    width: 16%;
+    display: initial;
+    margin-right: 15px;
+}
+
+.col-hr-vr{
+    padding: 0px;
+    padding: 0.8% 0 0.8% 0;
+    max-width: 25px;
+}
+
+.hr-vertical{    
+    height:60%; /* you might need some positioning for this to work, see other questions about 100% height */
+    width:0;
+    border:1px solid #ffffff;
+}
+
+.social .form-control:focus{
+    width: 25%;
+    display: initial;
+}
+
+.map-position{
+    max-width: 60%;
+    padding: 20px 0px 0px 0px;
+}
+
+#btn-registrar{
+    background-color: #FAE90E;
+    border-radius: 5px;
+    border: none;
+    height: 55px;
+    color: white;
+    padding: 15px 25px 15px 25px;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.btn-register-container{
+    padding-left: 40%;
+    margin-bottom: 30px;
+}
+
+input[type=text], input[type="password"], #text-direction, #select-country{
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 14px;
+    border: none;
+    height:  40px;
+    background-color: #ededed;
+    border-radius: 5px;
+}
+#text-direction{
+    height: auto;
+}
+input[type=text]:focus, input[type="password"]:focus, #text-direction:focus, #select-country:focus{
+    border:             1px solid #006473e5;
+    box-shadow:         0 0 4px #006473e5;
+    padding:            3px 0px 3px 10px;
+    background-color: white;
+}
+
+.w-do-area{
+    height: 160px;
+    width: 100%;
+    padding-left: 14px;
+    border: none;
+    background-color: #ededed;
+    border-radius: 2px;
+}
+
+.w-do-area:focus{
+    background-color: white;
+}
+
+input[type="file"]{
+    height: 0px;
+    overflow: hidden;
+    width: 0px;
+}
+
+.background-cool{
+    background-color: #2C2C2C;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+#banner{
+    height: 393px;
+    background-color: #ffffff;
+    margin-bottom: 130px
+}
+
+.message-publicity{
+    text-align: center;
+    margin-top: 60px;
+}
+
+.container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.label-banner{
+    font-size: 19px;
+    transition: transform 0.8s ease-out;
+    background-color:  #2C2C2C;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: 2px solid white;
+    color:white;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.label-banner:hover, .label-logotype:hover{
+    transform: scale(0.9);
+}
+
+.information{
+    max-width: 1200px;
+    background-color: white;
+    padding: 30px 20px 30px 20px;
+}
+
+.position-carousel{
+    position: initial;
+    height: 393px;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.add-banner {
+    position: relative;
+    display: inline-block;
+    width: 320px;
+  }
+  
+.add-banner .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: 130%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+.add-banner .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+  
+.add-banner:hover .tooltiptext {
+    visibility: visible;
+}
+
+.logotype-container{
+      width: 200px;
+      height: 180px;
+      border-radius: 5px;
+      border: 3px solid white;
+      margin: 300px 0px 30px 8%;
+      background-color: #fee600e3;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 3;
+  }
+
+  .label-logotype{
+      border-radius: 5px;
+      padding: 7px 10px 7px 10px;
+      background-color: #2C2C2C;
+      color: white;
+      font-size: 14px;
+      transition: transform 0.8s ease-out;
+  }
+
+  .logotype {
+    position: relative;
+    display: inline-block;
+    width: 140px;
+  }
+  
+  .logotype .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: 130%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .logotype .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+  
+  .logotype:hover .tooltiptext {
+    visibility: visible;
+  }
+
+@media (min-width: 1200px){
+  .container {
+        max-width: 1200px;
+        background-color: #ffffff;
+        margin-bottom: 50px;
+        border-radius: 5px;
+  }
+}
+
+.fst{
+    background-color: #FAE90E;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.fst h2{
+    font-weight: bold;
+    color: white;
+}
+
+.fn{
+    background-color: #FAE90E;
+    height: 40px;
+}
