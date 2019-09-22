@@ -1,0 +1,16 @@
+{
+    "name": "jorge/gfs",
+    "description": "gfs",
+    "type": "project",
+    "license": "GNU3",
+    "authors": [
+        {
+            "name": "Jorge Marin",
+            "email": "jorgemarin9915@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "google/cloud": "dev-master"
+    }
+}

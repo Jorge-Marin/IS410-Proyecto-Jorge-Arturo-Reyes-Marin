@@ -12,6 +12,7 @@ body{
 }
 
 .logo-company{
+    margin-top: 8px;
     width: 120px;
     border-radius: 5px;
     margin-bottom: 30px;
@@ -83,18 +84,18 @@ label{
     display: initial;
 }
 
-.map-position{
+.map-position {
     max-width: 60%;
-    padding: 20px 0px 0px 0px;
+    padding: 70px 0px 0px 40px;
 }
 
 #btn-registrar{
     background-color: #FAE90E;
-    border-radius: 5px;
+    border-radius: 1.55rem;
     border: none;
     height: 55px;
     color: white;
-    padding: 15px 25px 15px 25px;
+    padding: 5px 25px 5px 25px;
     font-weight: 600;
     font-size: 1.3rem;
 }
@@ -104,24 +105,27 @@ label{
     margin-bottom: 30px;
 }
 
-input[type=text], input[type="password"], #text-direction, #select-country{
+#text-direction{
+    height: 120px !important;
+}
+
+input[type='text'], input[type='password'], #select-country, #text-direction, .w-do-area{
     width: 100%;
-    margin-bottom: 20px;
     padding-left: 14px;
     border: none;
-    height:  40px;
-    background-color: #ededed;
-    border-radius: 5px;
+    height: 45px;
+    border-radius: 1.35rem;
+    background-color: #f4f4f4;
 }
-#text-direction{
-    height: auto;
+
+input[type=text]:focus, input[type="password"]:focus, #select-country:focus, #text-direction:focus, .w-do-area:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #7b7b7b !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(84, 84, 84, 0.18) !important;
 }
-input[type=text]:focus, input[type="password"]:focus, #text-direction:focus, #select-country:focus{
-    border:             1px solid #006473e5;
-    box-shadow:         0 0 4px #006473e5;
-    padding:            3px 0px 3px 10px;
-    background-color: white;
-}
+
 
 .w-do-area{
     height: 160px;
@@ -149,14 +153,14 @@ input[type="file"]{
 }
 
 #banner{
-    height: 393px;
+    height: 600px;
     background-color: #ffffff;
     margin-bottom: 130px
 }
 
 .message-publicity{
     text-align: center;
-    margin-top: 60px;
+    margin-top: 150px;
 }
 
 .container-fluid{
@@ -175,6 +179,7 @@ input[type="file"]{
     font-weight: 500;
     margin-left: 15px;
     margin-top: 15px;
+    width: 98%
 }
 
 .label-banner:hover, .label-logotype:hover{
@@ -199,6 +204,7 @@ input[type="file"]{
     position: relative;
     display: inline-block;
     width: 320px;
+    left: 2%;
   }
   
 .add-banner .tooltiptext {
@@ -240,7 +246,7 @@ input[type="file"]{
       background-color: #fee600e3;
       position: absolute;
       left: 0px;
-      top: 0px;
+      top: 219px;
       z-index: 3;
   }
 
@@ -251,6 +257,8 @@ input[type="file"]{
       color: white;
       font-size: 14px;
       transition: transform 0.8s ease-out;
+      position: relative;
+      z-index: 2;
   }
 
   .logotype {
@@ -312,4 +320,74 @@ input[type="file"]{
 .fn{
     background-color: #FAE90E;
     height: 40px;
+}
+
+.container-wallpaper{
+    width: 100%;
+    height: 600px;
+    background: #CCC;
+    overflow: hidden;
+}
+
+.logotype-box{
+    width: 100%;
+    height: 173.7px;
+    overflow: hidden;
+    position: relative;
+    top: -45px;
+}
+
+.container-wallpaper img{
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+.logotype-box img{
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+@supports(object-fit: cover){
+    .container-wallpaper img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    .logotype-box img{
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 5%;
+}
+
+#map{
+    position: relative;
+    overflow: hidden;
+    height: 510px;
+}
+
+.alert-message{
+    background-color: #f5e723;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    position: fixed;
+    top: 840px;
+    left: 766px;
+    z-index: 5;
+}
+
+#alert-files-size{
+    width: 420px;
+    display: none;
 }

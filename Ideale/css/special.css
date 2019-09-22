@@ -850,6 +850,8 @@
 }
 
 
+
+
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -1024,4 +1026,36 @@
 .return{
     padding-left: 5%; 
     font-size: 1.7rem;
+}
+
+.exclamation-simbol{   
+    font-size: 4.2rem;
+    color: #ffdf01;
+    padding-left: 42.5%;
+}
+
+
+.btn-color-accept{
+    background-color: #ffdf01;
+    color: white;
+    font-weight: 500;
+    border-color: #ffdf01;
+}
+
+.btn-color-accept:active , .btn-color-accept:hover{
+    color: white !important;
+    background-color: #ffdd01d8 !important;
+    border-color: #c69500;
+}
+
+.print-a {
+    float: right;
+    color: #232323 !important;
+}
+
+.print-a:hover{
+    float: right;
+    color: #000000 !important;
+    text-decoration: underline !important;
+    cursor: pointer;
 }

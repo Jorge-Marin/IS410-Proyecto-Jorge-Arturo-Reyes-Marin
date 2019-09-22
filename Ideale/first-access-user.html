@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Configuracion de Perfil</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/first-access-user.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="margin-top: 70px;">
+            <div id="first-pass" class="col-xl-4" style="padding: 2%; margin: auto">
+                <div class="container-item-nav">
+                    <div>
+                        <h6>1. Ingresa una Imagen Para tu Perfil</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12" style="padding: 5px 90px;">
+                            <img src="img/naruto.jpg" class="rounded-circle" width="150px" alt="">
+                        </div>
+                    </div>
+                <div>
+                    <h5 class="text-center">Bienvenido Name Client</h5>
+                    <label class="card-text text-center"  style="font-size: 1rem;">
+                        Se te asignara un perfil donde podras gestionar las promociones que hayas guardado en algun momento,
+                        asi tambien gestionar y tener un acceso mas rapido a las empresas que te gustan, gestionar tu historial de transacciones que te mostraran los detalles de tu compra, Disfruta de nuestros servicios.
+                    </label>
+                </div>
+                <div class="row">
+                    <div class="container-buttons-first">
+                        <button type="button" id="first" class="btn-continue">Continuar</button>
+                        <button type="button" id="omit-first" class="btn-omit">Omitir</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="col-xl-10" id="second-pass" style="padding: 6% 2%;margin: auto; display: none;" >
+                <div class="container-item-nav">
+                    <h6>2. Ingrese una Fotografia de Portada</h6>
+                    <div class="container-wallpaper">
+                        <img src="img/Wallpaper/wallpaperExample.png" alt="">
+                    </div>
+                    <div class="container-buttons-nav">
+                        <button type="button" id="second" class="btn-continue">Continuar</button>
+                        <button type="button" id="omit-second" class="btn-omit">Omitir</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container-item-nav col-xl-10" id="third-pass" style="display: none; margin: auto; margin-top: 60px;">
+                <div>
+                    <h6 style="margin-bottom: 20px;">3. Donde quieres que lleguen tus compras, Escribe tu Direccion:</h6>
+                </div>
+                <div>
+                    <textarea id="editor1">
+                    </textarea>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <h6 style="margin-bottom: 20px;">4. Tus redes sociales</h6>
+                    </div>
+                    <div class="col-xl-12 container-inputs-social">
+                        <div class="col-xl-4">
+                            <input type="text" class="form-control products rounded-input-text" placeholder="Titulo del Producto">
+                        </div>
+                        <div class="col-xl-4">
+                            <input type="text" class="form-control products rounded-input-text" placeholder="Titulo del Producto">
+                        </div>
+                        <div class="col-xl-4">
+                            <input type="text" class="form-control products rounded-input-text" placeholder="Titulo del Producto">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-buttons-nav">
+                    <button type="button" id="third" class="btn-continue">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.8.0/standard-all/ckeditor.js"></script>
+<script>
+    $("#first").click(function(){
+    $("#first-pass").fadeOut('slow',function() {
+        $("#second-pass").fadeIn('slow');
+     });
+  });
+
+  $("#second").click(function(){
+    $("#second-pass").fadeOut('slow',function() {
+        $("#third-pass").fadeIn('slow');
+     });
+  }); 
+  
+  $("#third").click(function(){
+    $("#third-pass").fadeOut('slow',function() {
+        $("#fourt-pass").fadeIn('slow');
+     });
+  });
+</script>
+ <script>
+    CKEDITOR.replace( 'editor1', {
+    toolbar: [
+        { name: 'clipboard', items: [ 'Undo', 'Redo' ] },
+        { name: 'styles', items: [ 'Styles', 'Format' ] },
+        { name: 'basicstyles', items: [ 'Bold', 'Italic']},
+        { name: 'paragraph', items: [ 'NumberedList', 'BulletedList']}
+    ],
+    
+} );
+</script>
+</body>
+</html>
+
+
+
+<!--
+<div class="container">
+        <div class="row">
+            <div id="show-profile" class="col-xl-4" style="padding: 2%;">
+                <div class="container-item-nav">
+                    <div>
+                        <h6>1. Ingresa una Imagen Para tu Perfil</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-12" style="padding: 5px 90px;">
+                            <img src="img/naruto.jpg" class="rounded-circle" width="150px" alt="">
+                        </div>
+                    </div>
+                <div>
+                    <h5 class="text-center">Bienvenido Name Client</h5>
+                    <label class="card-text text-center"  style="font-size: 1rem;">
+                        Se te asignara un perfil donde podras gestionar las promociones que hayas guardado en algun momento,
+                        asi tambien gestionar y tener un acceso mas rapido a las empresas que te gustan, gestionar tu historial de transacciones que te mostraran los detalles de tu compra, Disfruta de nuestros servicios.
+                    </label>
+                </div>
+                </div>
+            </div>
+            <div class="col-xl-8" style="padding: 4.3% 2%;">
+                <div class="container-item-nav">
+                    <h6>2. Ingrese una Fotografia de Portada</h6>
+                    <div class="container-wallpaper">
+                        <img src="img/Wallpaper/wallpaperExample.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container-item-nav col-xl-12">
+                <div>
+                    <h6 style="margin-bottom: 20px;">3. Donde quieres que lleguen tus compras, Escribe tu Direccion:</h6>
+                </div>
+                <div>
+                    <textarea id="editor1">
+                    </textarea>
+                </div>
+            </div>  
+        </div>
+    </div> 
+
+    
+    <script src="https://cdn.ckeditor.com/4.8.0/standard-all/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'editor1', {
+        toolbar: [
+          { name: 'clipboard', items: [ 'Undo', 'Redo' ] },
+          { name: 'styles', items: [ 'Styles', 'Format' ] },
+          { name: 'basicstyles', items: [ 'Bold', 'Italic']},
+          { name: 'paragraph', items: [ 'NumberedList', 'BulletedList']}
+        ],
+        
+      } );
+    </script>
+
+-->

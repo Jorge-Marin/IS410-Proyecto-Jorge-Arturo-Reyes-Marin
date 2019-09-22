@@ -1,0 +1,121 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+.name-profile{
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.email-user{
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.count-social{
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.update {
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 3px;
+}
+
+.container-wallpaper{
+    width: 915.5px;
+    height: 330px;
+    background: #CCC;
+    overflow: hidden;
+}
+
+.container-wallpaper img{
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+@supports(object-fit: cover){
+    .container-wallpaper img{
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+}
+
+.social-icons{
+    width: 30px;
+}
+
+.container-social{
+    top:  20%;
+    left: 83.7%;
+    width: 11%;
+    position: absolute;
+}
+
+.title-container{
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #000000cc;
+    padding-left: 12px;
+    padding-top: 5px;
+}
+
+.save-promotions{
+    padding: 0% 2%;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.title-promotions{
+    padding: 25px 25px 0px 25px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0px;
+}
+
+.promotions-saves{
+    width: 110px;
+}
+
+.descount-promotion{
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.view-all{
+    padding-left: 410px;
+    margin-top: 25px;
+}
+
+.name-like-company{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.date-buy{
+    float: right;
+}
+
+.img-transaction-product {
+    width: 10%;
+}
+
+.delete-item{
+    float: right;
+    width: 10px;
+    position: relative;
+    left: -96%
+}
+
+#email-invalid-feedback{
+    padding-left: 10px;
+    font-weight: 800;
+}

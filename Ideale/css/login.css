@@ -25,26 +25,26 @@ body{
 
 input[type='text'], input[type='password']{
     width: 100%;
-    margin-bottom: 20px;
     padding-left: 14px;
     border: none;
     height: 45px;
-    background-color: #ededed;
-    border-radius: 5px;
+    border-radius: 1.35rem;
+    background-color: #f4f4f4;
 }
 
 input[type=text]:focus, input[type="password"]:focus{
-    border:             1px solid #006473e5;
-    box-shadow:         0 0 4px #006473e5;
-    background-color: white;
-    padding:            3px 0px 3px 10px;
+    color: #495057;
+    background-color: #fff;
+    border-color: #7b7b7b;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(84, 84, 84, 0.18);
 }
 
 label{
     font-size: 18px;
     font-weight: bolder;
     color: #212529ab;
-    margin: 5px 0px 5px 0px;
+    margin: 25px 0px 10px 0px;
 }
 
 .btn-logotype{
@@ -103,10 +103,10 @@ label{
     font-weight: bold;
   }
 
-  .sign-up{
-      margin-top: 120px;
+.sign-up{
+    margin-top: 120px;
   }
-
+  
   .sign-up label{
     font-size: 16px; 
     font-weight: bold; 
@@ -120,4 +120,31 @@ label{
 .container-fluid{
   background-color: #FAE90E;
   height: 40px;
+}
+
+.valid-feedback {
+    color: #212529 !important;
+    padding-left: 5%;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.form-control.is-valid{
+  border-color: #007bff;
+  padding-right: calc(1.5em + .75rem);
+  background-image: url(../icons/check.svg) !important;
+}
+
+.form-control.is-valid:focus{
+  border-color: #007bff !important;
+  box-shadow: 0 0 0 0.2rem rgba(29, 58, 201, 0.25) !important;
+  background-image: url(../icons/check.svg) !important;
+}
+
+.svg-verify{
+  width: 10%;
+  position: absolute;
+  top: 63.1px;
+  left: 87.2%;
+  display: none;
 }

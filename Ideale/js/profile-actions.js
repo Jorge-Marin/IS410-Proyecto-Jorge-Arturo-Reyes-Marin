@@ -219,7 +219,6 @@ function showModal(srcImage,iCome,idFather){
 }
 
 function returnMeModalComment(){
-  console.log("retorne");
   $('#modal-image').modal('hide');
   $('#modal-comments').modal('show');
   $('#btn-close').removeAttr('onclick');
@@ -654,7 +653,6 @@ function showCommentPublication(idElemetsFather){
   var parent = document.querySelector('#'+idElemetsFather);
   var divs = parent.querySelectorAll('div');
   
-  console.log(divs);
   $('#body-modal-images').empty();
   $('#modal-comments').modal('show');
   $('#body-modal-images').append(`
@@ -817,13 +815,7 @@ function returnPublication(){
 }
 
 
-
-	
-
-
-/*divs[i].style.backgroundImage
-
-
-
-*/
+function createPromotionalSheet(){
+  $('#promotional-sheet').modal('show');
+}
 

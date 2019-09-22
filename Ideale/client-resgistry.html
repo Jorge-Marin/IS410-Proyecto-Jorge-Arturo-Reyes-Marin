@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Login Ideale</title>
+  <link rel="stylesheet" href="css/all.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/login.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
@@ -12,7 +13,7 @@
 <body>
   <div class="container">
     <div class="col-xl-6 login-div">
-        <img src="img/logo-ideale.png" class="logotype-client" width="100px" alt="">
+        <img src="icons/Logotype-Black.png" class="logotype-client" width="100px" alt="">
         <div class="row">
           <div class="col-xl-12" style="text-align: center;">
             <h2>Abrir una Cuenta</h2>
@@ -20,35 +21,76 @@
         </div>
         <div class="row">
           <div class="col-xl-6">
-            <label>Nombre</label>
-            <input type="text" placeholder="Nombre">
+            <label for="firstname">Nombre</label>
+            <input type="text" id="firstname" class="form-control rounded-input-text" placeholder="Nombre" value="Jorge">
+            <div class="valid-feedback">
+                Ok
+            </div>
+            <div class="invalid-feedback">
+              Campo obligatorio
+            </div>
           </div>
           <div class="col-xl-6">
             <label>Apellido</label>
-            <input type="text" placeholder="Apellido">
+            <input type="text" id="lastname" class="form-control rounded-input-text" placeholder="Apellido" value="Marin">
+            <div class="valid-feedback">
+              Ok
+            </div>
+            <div class="invalid-feedback">
+              Campo obligatorio
+            </div>
           </div>
         </div>
         <div class="row">
             <div class="col-xl-12">
               <label>Correo Electronico</label>
-              <input type="text" name="" id="" placeholder="Correo Electronico">
+              <input type="text" name="email" onkeyup="validarEmailEnLinea(this.value)" class="form-control rounded-input-text" id="email" placeholder="Correo Electronico" value="jorgemarin9915@gmail.com">
+              <svg version="1.1" class="svg-verify" id="L4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 0 0" xml:space="preserve">
+                <circle fill="#2C2C2C" stroke="none" cx="6" cy="50" r="6">
+                    <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.1"></animate>    
+                </circle>
+                <circle fill="#2C2C2C" stroke="none" cx="26" cy="50" r="6">
+                    <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.2"></animate>       
+                </circle>
+                <circle fill="#2C2C2C" stroke="none" cx="46" cy="50" r="6">
+                    <animate attributeName="opacity" dur="1s" values="0;1;0" repeatCount="indefinite" begin="0.3"></animate>     
+                </circle>
+                </svg>
+              <div class="valid-feedback">
+                Ok
+              </div>
+              <div class="invalid-feedback" id="email-invalid-feedback">
+                Campo Obligatorio.
+              </div>
             </div>
         </div>
         <div class="row">
           <div class="col-xl-12">
             <label>Contraseña</label>
-            <input type="password" name="" id="password-one" placeholder="Contraseña">
+            <input type="password" name="password" class="form-control rounded-input-text" id="password" placeholder="Contraseña" value="asd.456">
+            <div class="valid-feedback">
+              Ok
+            </div>
+            <div class="invalid-feedback">
+              Campo obligatorio
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="col-xl-12">
             <label>Verificacion de Contraseña</label>
-            <input type="password" name="" id="password-two" placeholder="Verificacion de Contraseña">
+            <input type="password" name="" class="form-control rounded-input-text" id="password-verify" placeholder="Verificacion de Contraseña" value="asd.456">
+            <div class="valid-feedback" id="wrong-password-fill">
+              Ok
+            </div>
+            <div class="invalid-feedback" id="wrong-password-nofill">
+              Campo obligatorio
+            </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row" style="margin-top: 9px;">
             <div class="checkbox">
-                <input type="checkbox" class="input-assumpte" id="show-password">
+                <input type="checkbox" class="input-assumpte" id="show-password" onclick="showPassword()">
                 <label for="show-password"></label><label style="font-size: 14px;">&nbsp Mostrar Contraseña</label>
               </div>
         </div>
@@ -59,7 +101,7 @@
         </div>
         <div class="row">
           <div class="col-xl-12">
-            <button class="btn-logotype">Crear Cuenta</button>
+            <button id="btn-create" class="btn-logotype" onclick="createAccount()">Crear Cuenta</button>
           </div>
         </div>
     </div>   
@@ -67,7 +109,8 @@
   <div class="container-fluid">
   </div>
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/company-registration.js"></script> 
+  <script src="js/create-user.js"></script>
 </body>
 </html>
